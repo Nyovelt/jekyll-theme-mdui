@@ -8,6 +8,7 @@
   url: /tags/
   icon: "&#xe893;"
 - name: LOVER
+  switch: false
   url: /love/
   icon: "&#xe87d;"
   color: "red"
@@ -15,6 +16,7 @@
   url: /friends/
   icon: "&#xe8a3;"
 - name: EDITOR
+  switch: false
   url: /editor/
   icon: "&#xe150;"
 - name: navSearch
