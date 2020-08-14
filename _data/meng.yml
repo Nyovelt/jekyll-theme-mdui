@@ -64,7 +64,7 @@ music_player:
 
 head_card:
   switch: true
-  left_img: "https://ooo.0o0.ooo/2017/06/19/5947b272d418b.jpg"
+  left_img: "https://7cqeqw.sn.files.1drv.com/y4mYKijtU7_cv-63LjZmy41LIlHN3mHF67SInf6fYVK_bxcJ_XlaVX3QZJNFipgplG-90xRtGioy5xJT9e0OcdNqGUFMzTeLlrW7BMyhrzn15Xm9dAOz0c8rQmlgzjgHrX0F7fJERmha-ybb6zuPoZj8Tkmc4h8SZ9sZaqT_Wv21e4Q4rQNSdhU-4BG80ZvDM4T8ndGn-lvZFbp63DxhtNtGQ?width=640&height=300&cropmode=none"
   left_text: ""
   right_img: "https://7cqdqw.sn.files.1drv.com/y4mU4p6LRGPn47naEFEyUi3eSRyll_mb-Hq_yxDtac5zh6AG6FljBIbCnFfsVDqKT8qT9ey275dQ1gHDO5xTii8jDk-fM2MImylirvfn6ph2x3rsTg7yeabIh4_4DqPUHd8VcX6BAwu6IqW9L4iI5pD9oa6eu6VGyKlCOXoMmPZXEWb2TkCHISVrt-TaXmi6ZKfapU5qvaGVWoeTs2WHdWrfA?width=1936&height=2023&cropmode=none"
   offset_level: 2
