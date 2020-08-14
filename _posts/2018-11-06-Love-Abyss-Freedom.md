@@ -3,7 +3,9 @@ title: 爱，深渊与自由
 date:  2018-11-06 15:38:33 +0800
 category: Literature
 tags: 精神分析 
-excerpt: 贯彻爱与真实的邪恶，可爱又迷人的反派角色，我们是穿梭在银河的火箭队。白洞，白色的明天在等着我们。
+author: Canary
+img: https://4sqgqw.sn.files.1drv.com/y4mZjApWgd9xchuFNqMpBQWZO0QOuYKYG2YtCOmFAMtpQT4sL2MnWnih-UyPLxJmdMAHuLA6Hs_FfGsavBLMDIf_0gOH2wqrbo_cx5cX7McNqPje5E9ut2zPP7iOj5mrnSs0k9gF-7Ve_6aV8yVH_2u6CxL-ffYjBbTV44t7lxchw3jYrcv4lh8MmPcasNGDW9YPIOm6nrgkkHmKTab1ng2XA?width=622&height=540&cropmode=none
+describe: 贯彻爱与真实的邪恶，可爱又迷人的反派角色，我们是穿梭在银河的火箭队。白洞，白色的明天在等着我们。
 ---
 
 
