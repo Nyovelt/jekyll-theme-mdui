@@ -14,7 +14,7 @@ background:
    purecolor: "#eeeeee" # the background color
 
 img:
-   avatar: "https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png" # your avatar
+   avatar: "https://www.gravatar.com/avatar/b2c4a677169e019afdc89144f4500236?s=200&d=robohash&r=g" # your avatar
 
 card:
    card_shadow: 1 # card shadow (0-24), 0 is not displayed
