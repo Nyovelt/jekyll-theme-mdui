@@ -1,9 +1,19 @@
 - name: KeJun
   image: https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png
   url: https://kejun.me
-  describe: 二次元智障
+  describe: 是主题作者
 
-- name: MDUI
+- name: Kiwisama
+  image: https://i.loli.net/2018/12/14/5c135b8959a6f.png
+  url: https://nyan.kiwi.cat/
+  describe: 是Kiwi
+
+- name: Shinohara-rin
   image: 
-  url: https://www.mdui.org/
-  describe: 一套用于开发 Material Design 网页的前端框架
+  url: https://shinohara-rin.github.io/
+  describe: 是Rin姐姐
+
+- name: Tsez
+  image: https://c.disquscdn.com/uploads/users/10713/6272/avatar92.jpg?1501842504
+  uurl: https://blog.tse.moe/
+  descrive: 是圈酱
