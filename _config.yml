@@ -1,8 +1,8 @@
-title: "Jekyll-Theme-MDUI"
-description: "A Jekyll theme based on MDUI"
-url: 
-baseurl: ""
-author: "KeJun"
+title: "Canary's Natïve blog"
+description: "Stay Sïmple ,Stay Young "
+url: "aaaab3n.moe"
+baseurl: "aaaab3n.moe"
+author: "Canarypwn"
 paginate: 5
 paginate_path: "/blog/page:num/"
 
