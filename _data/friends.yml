@@ -41,6 +41,29 @@
 - name: ⑨BIE
   image: https://www.gravatar.com/avatar/c004f07e4aeea5ada1cc18fa390f6e09?s=64&r=X&d=
   url: https://9bie.org/
-  describe: 是⑨BIE
+  describe: 是⑨BIE大佬
 
-  
+- name: Crux 観測所
+  image: 
+  url: https://blog.froseiun.in/
+  describe: 是Froseiun
+
+- name: rin的小窝
+  image: https://rin.moe/wp-content/uploads/2020/04/IMG_20200429_211808_075.png
+  url: https://rin.moe/
+  describe: 您！
+
+- name: 洛里斯
+  image: https://i.loli.net/2019/08/16/cpEvaSo3DuwCLBy.png
+  url: https://i.loli.net/2019/08/16/cpEvaSo3DuwCLBy.png
+  describe: 程序员改变世界
+
+- name: 常务
+  image: https://www.gravatar.com/avatar/c961edab41e5a48851d75e8f2d3e973c?s=64&r=X&d=
+  url: http://www.kira.moe/
+  describe: 惟陈言之务去。
+
+- name: PatchouliTDF
+  image: 
+
+
