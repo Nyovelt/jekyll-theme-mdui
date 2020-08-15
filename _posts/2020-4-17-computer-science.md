@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "计算机科学与大白日梦""
+title: "计算机科学与大白日梦"
 date: 2020-4-15 9:00:59 +0800
 category: Life
 tags: Living
