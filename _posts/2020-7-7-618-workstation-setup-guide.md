@@ -4,7 +4,7 @@ title: 618电脑指北
 date: 2020-7-7 9:00:59 +0800
 category: Technology
 tags: Linux KVM
-img: https://rebvfw.sn.files.1drv.com/y4mVDEFjXwuuD0TLnpsJAoTMUW9FO8zXR63fN0_r2yKRDl3sqAmTevTPDAmOBoYCWk-XMBl--CgoIY2CGl5fYJZjmLHQC_zNOs27NteUgKDoRyJC9GutE61rYV9-dMbhKKbCXdgYiffW2zrEcrhoZTGqMM7XWgKNengo-_wQhuFd98jmIJZoFHXDMP1Kx0a670-DblY3vvQW505msZfJurleA?width=4032&height=3024&cropmode=none
+img: https://7mqcqw.sn.files.1drv.com/y4mZSyMnOmvLD9kDEmPnk4nPBKf51rDYVzw2xXx3ePrmr5WK75GSKbQz3sTyX7ti7DDJrMyY1YNq2KRQZ1Og1gvlRU5uT7dJSSuUl7COTBI2Sjp1BsdSTuK4ZJydywBr6VKy2cJh22RjzgvCqaY6FcyeH-PQwqaeycHp6EZzMa84PCW7RiuNN-0Jl_DDIfy9mVLpRJenec4-U4XQy9Rqnyc7g?width=640&height=360&cropmode=none
 describe: Manjaro + Windows
 
 ---
