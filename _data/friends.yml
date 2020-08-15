@@ -44,7 +44,7 @@
   describe: 是⑨BIE大佬
 
 - name: Crux 観測所
-  image: 
+  image: https://7cqmqw.sn.files.1drv.com/y4m_VPxQTFXci9AcsPbtj7XgGdJlIHK8_KspbfC3mIFxtO9vfdK_7mczKt0a5JO1zCeQVbYZywUbdnaK1bS_Njm_nW714td5QQn9POSs_ys_MUWmGHNalHX0Y8DLNnsk9MzKNHPaDK1Fqo_jF9eHA8nazCWNK-kvQ-aUGVlO_ehxmNOvBjSSAhKhnvQlO2NCllkbsDi1HQYdZN026-PLMBYaA?width=400&height=400&cropmode=none
   url: https://blog.froseiun.in/
   describe: 是Froseiun
 
@@ -89,18 +89,38 @@
   describe: 衣沾不足惜，但使愿无违。
 
 - name: Ainsley
-  image: 
+  image: https://7cqlqw.sn.files.1drv.com/y4m4X0_IZ_dHTzNXbIPYbq0IwM_seJhMJmIOqehm-bE2GA1V8hVAtNlrJ_nKe9L2SCuEsuCjBn6Cdmg8FVHJsSV1tYL66x0a1YpuCdgLsJCxGGePcWuA995oYUx4dOxGgenKOxC-BY0KNiAVNfxWQOZHq3e9BnkSdWr10JzNKR9sJ2Dw3KQ7YpsM0k70btZo1TNrCWmeKiBGYwOjg7Aa7-RJQ?width=1080&height=1080&cropmode=none
   url: https://eainsley.github.io/index.html
   describe: ShanghaiTech 卖菜学第一名！
 
 - name: 小邱
   image: https://www.littleqiu.net/images/Avatar.png
   url: https://www.littleqiu.net/
-  describe: Founder & Product Manager of @LittleSkinChina
+  describe: @LittleSkinChina
 
 - name: LightQuantum
   image: https://avatars0.githubusercontent.com/u/18749973?s=460&v=4
   url: https://lightquantum.me/
   describe: Maintainer of @SJTUG
+
+- name: 蓝瓜
+  image: https://melon.blue/assets/images/langua.svg
+  url: https://melon.blue/
+  describe: 好耶，是蓝瓜 (<ゝω·) ~☆
+
+- name: Ayaka
+  image: https://neko.ayaka.moe/image/avatar.jpeg
+  url: https://neko.ayaka.moe/
+  describe: 是喵喵
+
+- name: 蕾咪io
+  image: https://i.loli.net/2018/01/14/5a5b71634420f.jpg
+  url: https://www.linux.dog/
+  describe: 我，一事无成。
+
+- name: BBleae
+  image: https://i.loli.net/2018/10/17/5bc6c213b6d61.png
+  url: https://baka.studio/
+  describe: 東方プロジェクト同人サークル
 
 
