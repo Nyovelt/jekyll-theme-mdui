@@ -4,7 +4,7 @@ title: "也谈科学上网"
 date: 2019-08-04 21:09:35 +0800
 category: Technology
 tags: GFW Linux
-img: https://7mqeqw.sn.files.1drv.com/y4mpkyFT9vTVbkfNUwN6_IAMvRLxZ7xdbMwGVBGBxgJyGlk5B7OqMZ9Rf9oCo1HZqBWGWua4_p5kXEUW2TVaFyAM6VnP_0_bnVfJy4pgq_Aaa71CWvfH1i6UV2VKTJJOSeE24PN8cCi2ypAv9HK_1ZlsMr10HnvwWlZWhlaS6h4MiY5Pt9T84oe0YBTl1hjvsBy1bGtO_Vo8iHzdUCC-vBXaw?width=1208&height=664&cropmode=none
+img: https://7mqaqw.sn.files.1drv.com/y4mHP81OF8x7X3qcP_yLZOL9u0CzKPV_jyztoLIDo0LDKhEqjB7qoFwjMRnqYZduCb7lz55dFliEZprHohhM84C_0u8WfUVA4kh6p7tSD9F1cUCaZBfgIIBafrZj-QFJzvljBYN8_5Z6b-K2Av0Fy04AwuUlM0PJSsBioewykfYvQPKIabitwzCoIF6piQ77w3R4JWHC3BARgXusSSbQ67I-A?width=867&height=577&cropmode=none
 describe: 这条线路又双叒叕挂了
 ---
 
