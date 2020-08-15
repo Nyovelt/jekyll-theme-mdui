@@ -8,7 +8,7 @@ img: https://5c8qzw.sn.files.1drv.com/y4mBIHNi_Z3ekXuvWz0wyQGrPj3WU2DN_IH-wc965z
 describe: 电路基础期中概念梳理
 ---
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'], inlineMath: [['$','$']] } }); </script>
+
 
 
 
