@@ -4,7 +4,7 @@ title: 我为什么对新生说''快逃(''
 date: 2020-7-23 10:01:59 +0800
 category:  Life
 tags: Life
-img: 
+img: https://5c8nzw.sn.files.1drv.com/y4mHIrHDFEpWxFz41VEDx0VBP-L8C7vF2PXAWFfyjuhQxrsrbNm0K1UAocPW2tWpkNhDthiTl9zIVxZ3WkMoT7JbsYwQ5tYGOu_I6YaQ5CGD2UI2v-JsGOdTGorVfP5GD6MYyK5qdEjJuD7ua1pvJNNVWOWn03bEmPqPpmaxpyM44Q-jnnEvjKrhwcqjB65FE8_z4V6KDAA-9z_0aewbg1kMQ?width=1024&height=678&cropmode=none
 describe: 写于2020上海高考出分日
 
 ---
@@ -69,7 +69,7 @@ describe: 写于2020上海高考出分日
 
 正如存在主义告诉我们的那要，也许你的高考分数已经确定了，也许你去不了985，去不了211，去不了一本，去不了大专。但最好一定要清楚自己要做什么，想做什么。可能你三年都没有想清楚，没关系，大学四年和今后的人生中一定是能想清楚的。但如果你稍微考虑过一点的话，那再填志愿的过程中就用上这些想法吧。虽然有些事情已经无法改变，但你可以选择未来去哪个城市，从事哪种职业，身边的是什么样的人。
 
-正如并介拒绝复旦转而去HKU，从新闻系跨界到了数学系，只因一句“我想做科学家啊”。身边的人不甘心屈居现在的学校，转而考插班生，又在备考过程中了解到了自己真正的归宿。有一个同学填志愿的时候还考虑过去复旦最差 的专业，之后通过服兵役转到喜欢的专业，最后因为不喜欢父母安排好的生活，离开了东华金融，转而复读一年。生化环材只要喜欢就不一定是坑专业，计算机和金融最后也会变成社畜。遵循父母的安排和从高到低谈志愿也不是一件坏事。人生中的很多决定就像这样，没有绝对的正确答案。
+正如并介拒绝复旦转而去HKU，从新闻系跨界到了数学系，只因一句“我想做科学家啊”。身边的人不甘心屈居现在的学校，转而考插班生，又在备考过程中了解到了自己真正的归宿。有一个同学填志愿的时候还考虑过去复旦最差 的专业，之后通过服兵役转到喜欢的专业，最后因为不喜欢父母安排好的生活，离开了某本地有空调211大学，转而复读一年。生化环材只要喜欢就不一定是坑专业，计算机和金融最后也会变成社畜。遵循父母的安排和从高到低谈志愿也不是一件坏事。人生中的很多决定就像这样，没有绝对的正确答案。
 
 ![](https://sfvxrq.sn.files.1drv.com/y4m4xUrwH3YqFrQB_dswHC-r_EE6MARb_F7VDv9K3-7q3lpFyITsUbA8bOB5cuxSZfkTFEFdgQEUTk681PoaPyJbbwLIaebThB0j93Uc-O3mI6AoACd6cfGwUqVpUlSjHLn9mrurcxxLyb6QfT8ivMb9mXDQFg4CqQRh1oZ28Z3u2LvNRXaJuxdwP4MWD8j5_OAdopK4CyN1MhnSHP3IlxTIQ?width=684&height=1436&cropmode=none)
 
@@ -83,5 +83,9 @@ describe: 写于2020上海高考出分日
   - 可以查看这篇草稿 ([https://1drv.ms/w/s!Au3reWMu7K2CgpliZgHDzSEE_q3CGw?e=vOQs7t](https://1drv.ms/w/s!Au3reWMu7K2CgpliZgHDzSEE_q3CGw?e=vOQs7t), 密码 2333)
   - 内容是关于法哲学原理中的家庭
   
-  
+- 南瓜灯博士的评论大概就是我想说的
+
+  ![评论](https://5c8kzw.sn.files.1drv.com/y4mD-IcC20PzF5WLdgp4csjEvGNkkXZwWm2UoPjZ8qUd1XhBrudj-XcqQICxEY36sMOqispko5pNiVMk1OFsKYhMdEqXwUZJ1dj6LDGPUTQxHaQkBp9WUuoLD9gw1IzvyiZAhcW7w9TqdSg8-nob7JPgCCv8RHTGvOc__-bY52HHAFlV2k59leP1cn4kdbiBCHtQUpM9LdKC94M-weVJC-7gQ?width=828&height=702&cropmode=none)
+
+
 
