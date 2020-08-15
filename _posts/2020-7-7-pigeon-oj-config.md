@@ -87,7 +87,7 @@ ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -D -H tcp://0.0.0.0:44
 - Cert CA      -> ca.pem 
 - MAx job     -> CPU逻辑处理器数
 
-结合之前[一篇文章](https://aaaab3n.co/life/2020/07/07/618-workstation-setup-guide)，我将3900X处理器分配了12个线程给OJ使用。
+结合之前[一篇文章](https://aaaab3n.moe/technology/2020/07/07/618-workstation-setup-guide)，我将3900X处理器分配了12个线程给OJ使用。
 
 
 
