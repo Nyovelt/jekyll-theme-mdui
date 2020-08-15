@@ -9,11 +9,19 @@
   describe: 是Kiwi
 
 - name: Shinohara-rin
-  image: 
+  image: https://7cqfqw.sn.files.1drv.com/y4m_NfUxRsaLuwFeVMe4lDmZMmDL1UqF5lEeQBuanJsuyQuGUgUmcTbvQIXj9MVfZpP3acYq4X3OPfVgXyT665jjoQWrmsM2ts5sXu2XRuJAOFDd3Y6S4qAXexQVXoVrVKeyCOFf9uPIhaOK0l8oVDn5r83SbyyY2bHnGl6_p88wIb70Jry80O2_IhqCCvC4dOdeNWtoI1zVf8_4T33dQsx-w?width=640&height=640&cropmode=none
   url: https://shinohara-rin.github.io/
   describe: 是Rin姐姐
 
 - name: Tsez
   image: https://c.disquscdn.com/uploads/users/10713/6272/avatar92.jpg?1501842504
-  uurl: https://blog.tse.moe/
-  descrive: 是圈酱
+  url: https://blog.tse.moe/
+  describe: 是圈酱
+
+- name: Siger Young
+ image: https://avatars3.githubusercontent.com/u/13887988?s=400&u=ed61e4ee559694bc8f09db2ae88b1d30974d304e&v=4
+ url: https://cs.yscale.tk
+ describe: INFOSEC@HUST 大膜法师 巨佬
+
+- name:
+ 
