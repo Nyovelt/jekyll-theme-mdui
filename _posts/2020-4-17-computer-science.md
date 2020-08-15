@@ -3,7 +3,7 @@ layout: post
 title: "计算机科学与大白日梦""
 date: 2020-4-15 9:00:59 +0800
 category: Life
-tags: Life
+tags: Living
 img: https://7mqlqw.sn.files.1drv.com/y4mbvZshzCCQWANEan9apUIR6G4_fenuTRj2jLdEfZd4fcgKnB3bCnQ6Xnl0KmX1k_ihXhrUjVE1C_PuPioarYp8MZUsdgzFTc4CqyhoMjnv_CHmxjBRKY5EhZBQcywM8xEGrlTnJ2YKfC-2CUhdF4mHFPq6_wrBcMrNHKiSibX3IB6u1FTL7ERqP2JxeXgOYMHn8drqNXqv45qrsqli7racQ?width=606&height=800&cropmode=none
 describe:  Canarypwn, 出生过, 在读CS，将来要死。
 ---
