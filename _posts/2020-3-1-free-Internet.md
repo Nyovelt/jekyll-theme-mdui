@@ -1,9 +1,11 @@
 ---
-title: 什么叫自由互联网啊（战术后仰）
+layout: post
+title: "什么叫自由互联网啊（战术后仰）"
 date: 2020-3-1 22:00:59 +0800
-category: Life 精神分析
-tags: GFW
-excerpt: 自由是我们能想到的最恐怖的东西，但不管它在哪里，我都会随之而去。
+category: Literature
+tags: GFW 精神分析
+img: https://am9paw.sn.files.1drv.com/y4mOttBwwxw8m_0e-5YJLuLcoYo4-yhYeDHbMWcLccoV1yIL5AklRHVAJPaNVrNegk7hS4tFjPCSkTRP9qKtmdvmGje9HF7mTdM-0dJHxu1HbunwC7E0c0Uxi6DGw4H_SZMoNv5tVOyhbXROHceN2c7i_3VgWNb_7qVf1ZDTHIz_JhDc2ruMCLIPHcUpSpRnxjSATjaF8OdTTPqhrM2QDHOYw?width=600&amp;height=800&amp;cropmode=none
+describe: 自由是我们能想到的最恐怖的东西，但不管它在哪里，我都会随之而去。
 ---
 
 
