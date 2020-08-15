@@ -21,7 +21,26 @@
 - name: Siger Young
  image: https://avatars3.githubusercontent.com/u/13887988?s=400&u=ed61e4ee559694bc8f09db2ae88b1d30974d304e&v=4
  url: https://cs.yscale.tk
- describe: INFOSEC@HUST 大膜法师 巨佬
+ describe: INFOSEC@HUST 大膜法师 巨佬 
 
-- name:
- 
+- name: Klog 科学帮
+  image: https://klog.app/es6-unbundled/static/favicon.ico
+  url: https://klog.app/
+  describe: 高中机社学长们的Blog
+
+- name: FlashWarrior
+  image: https://profile.csdnimg.cn/9/6/F/1_flashwarrior
+  url: https://me.csdn.net/FlashWarrior
+  describe: Linux用户，酷安机友, CS@ShanghaiTech
+
+- name: Murez
+  image: https://blog.murez.site/content/images/2020/01/---1.PNG
+  url: https://blog.murez.site/
+  describe: 是厶元のBLOG 
+
+- name: ⑨BIE
+  image: https://www.gravatar.com/avatar/c004f07e4aeea5ada1cc18fa390f6e09?s=64&r=X&d=
+  url: https://9bie.org/
+  describe: 是⑨BIE
+
+  
