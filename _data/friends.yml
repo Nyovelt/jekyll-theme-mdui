@@ -96,7 +96,7 @@
 - name: 小邱
   image: https://www.littleqiu.net/images/Avatar.png
   url: https://www.littleqiu.net/
-  describe: @LittleSkinChina
+  describe: LittleSkinChina
 
 - name: LightQuantum
   image: https://avatars0.githubusercontent.com/u/18749973?s=460&v=4
@@ -106,7 +106,7 @@
 - name: 蓝瓜
   image: https://melon.blue/assets/images/langua.svg
   url: https://melon.blue/
-  describe: 好耶，是蓝瓜
+  describe: 好耶，是蓝瓜 (<ゝω·) ~☆
 
 - name: Ayaka
   image: https://neko.ayaka.moe/image/avatar.jpeg
