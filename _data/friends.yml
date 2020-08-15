@@ -64,6 +64,43 @@
   describe: 惟陈言之务去。
 
 - name: PatchouliTDF
+  image: https://7cqcqw.sn.files.1drv.com/y4mjaK_aHxwA0AqAvTgNmGJroT2Pb-baPTvkbiX9QiHBC3MQwp9RVA_rTFqsqAlqRcybUL50QQO9i5BPgWU_Cy6RIN-zMoZlpxAa_bSLhAZpJ8JiR8AOTc_kFfjO3RxrEtpnl9KTIO0kc1goXJoIWFhqd6RBirDRBAy1YG--nEFDNEP6pa9t2XHfrzHLpbecGxWSsWLxXcR5p6Y8tsineDgdw?width=320&height=320&cropmode=none
+  url: https://librarian.mukiyu.moe/
+  describe: （She/Her) 是土豆粉 
+
+- name: NPofSi
+  image: https://blog.npofsi.pro/avatar.png
+  url: https://blog.npofsi.pro/
+  describe: 欢迎来到铃奈庵！
+
+- name: yzyzy
+  image: https://0.gravatar.com/avatar/9cf514fc54f0416bc02b7fb8e760298c?s=35&d=mm&r=g
+  url: http://blog.yzyzy.uk/
+  describe: 是yzy大佬
+
+- name: XEHOTH
+  image: https://xehoth.cc/
+  url: https://xehoth.cc/
+  describe: xehoth yyds!
+
+- name: Oscar's tech blog
+  image: https://oscarliu.tech/img/avatar.png
+  url: https://oscarliu.tech/
+  describe: 衣沾不足惜，但使愿无违。
+
+- name: Ainsley
   image: 
+  url: https://eainsley.github.io/index.html
+  describe: ShanghaiTech 卖菜学第一名！
+
+- name: 小邱
+  image: https://www.littleqiu.net/images/Avatar.png
+  url: https://www.littleqiu.net/
+  describe: Founder & Product Manager of @LittleSkinChina
+
+- name: LightQuantum
+  image: https://avatars0.githubusercontent.com/u/18749973?s=460&v=4
+  url: https://lightquantum.me/
+  describe: Maintainer of @SJTUG
 
 
