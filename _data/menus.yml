@@ -13,5 +13,5 @@
 - name: navSearch
   switch: true
 - name: about
-  url: /about/
+  url: https://who.aaaab3n.moe/#
   icon: "&#xe8a3;"
