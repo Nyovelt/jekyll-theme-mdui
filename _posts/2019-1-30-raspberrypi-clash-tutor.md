@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""在树莓派上配置Clash-linux"
+title: "在树莓派上配置Clash-linux"
 date:  2019-01-30 13:59:33 +0800
 category: Technology
 tags: IoT Linux GFW 
