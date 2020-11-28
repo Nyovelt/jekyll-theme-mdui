@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 # source 'https://gems.ruby-china.com'
-gem 'bundler', '1.17.1' 
 gem 'jekyll', '~> 4.0'
 
 group :jekyll_plugins do
