@@ -13,3 +13,4 @@ jobs:
       - uses: helaili/jekyll-action@2.0.1
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+          JEKYLL_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
