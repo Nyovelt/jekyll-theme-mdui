@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - master
-    schedule:
+  schedule:
     - cron:  '0 0 * * *'
 
 jobs:
   jekyll:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
 
@@ -26,6 +26,6 @@ jobs:
     # Specify the target branch (optional)
     - uses: helaili/jekyll-action@2.0.4
       env:
-        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+        JEKYLL_PAT: ${{ secrets.GITHUB_TOKEN }}
       with:
         target_branch: 'gh-pages'
