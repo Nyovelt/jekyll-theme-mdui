@@ -24,9 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install gem git -y
-          sudo gem install bundler:1.17.2 jekyll
+          
+mkdir $HOME/src
+cd $HOME/src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
            
       - name: Build jekyll
         run: |
