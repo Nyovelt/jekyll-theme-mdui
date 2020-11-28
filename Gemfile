@@ -1,5 +1,11 @@
-# source "https://rubygems.org"
-source 'https://gems.ruby-china.com'
+source "https://rubygems.org"
+# source 'https://gems.ruby-china.com'
+
+gem 'jekyll', '~> 4.0'
+
+group :jekyll_plugins do
+  gem 'jekyll-timeago', '~> 0.13.1'
+end
 
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
