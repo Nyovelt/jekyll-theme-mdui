@@ -9,9 +9,10 @@ describe: Netlify 要收钱了
 
 ---
 
+
 ## 为什么不自己 Host 服务
 
-正如 苏卡卡 在 [谈谈云服务和 SLA | Sukka's Blog (skk.moe)](https://blog.skk.moe/post/cloud-and-sla/) 中说的，在线云服务的 SLA 相比自己 Host 一个服务，可用性有很明显的提升。而且 GitHub Pages, GitHub Actions 和 Cloudflare 都是有免费额度的，对于个人用户完全够用。相信很多人之前买了 VPS，之后因为各种原因没有做好备份导致写了很久的博客文章丢失的事情，GitHub 的存储服务也能解决这个问题。
+正如 苏卡卡 在  [ 谈谈云服务和 SLA ]( https://blog.skk.moe/post/cloud-and-sla/ )  中说的，在线云服务的 SLA 相比自己 Host 一个服务，可用性有很明显的提升。而且 GitHub Pages, GitHub Actions 和 Cloudflare 都是有免费额度的，对于个人用户完全够用。相信很多人之前买了 VPS，之后因为各种原因没有做好备份导致写了很久的博客文章丢失的事情，GitHub 的存储服务也能解决这个问题。
 
 
 
@@ -27,9 +28,10 @@ describe: Netlify 要收钱了
 
 ### Jekyll
 
-Jekyll 在官方 [GitHub Actions | Jekyll • Simple, blog-aware, static sites (jekyllrb.com)](https://jekyllrb.com/docs/continuous-integration/github-actions/) 提供了 GitHub Actions。不过由于我的依赖和官方的 bundler 版本冲突，所以选择自己写。
+Jekyll 在官方 [GitHub Actions ](https://jekyllrb.com/docs/continuous-integration/github-actions/) 提供了 GitHub Actions。不过由于我的依赖和官方的 bundler 版本冲突，所以选择自己写。
 
 该文件见  [jekyll-theme-mdui/.github/workflows at master · Nyovelt/jekyll-theme-mdui](https://github.com/Nyovelt/jekyll-theme-mdui/tree/master/.github/workflows)
+
 
 ```json
 name: Build and deploy Jekyll site to GitHub Pages
@@ -56,7 +58,7 @@ jobs:
 
 - 表示使用 ubuntu-latest 作为构建机的操作系统，用 docker 的同学应该很熟悉
 
-```
+```json
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - uses: actions/cache@v1
         with:
