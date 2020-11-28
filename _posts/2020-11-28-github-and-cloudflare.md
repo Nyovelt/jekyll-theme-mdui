@@ -23,11 +23,11 @@ describe: Netlify 要收钱了
 
 ## GitHub Actions
 
-简单来说，GitHub Actions 可以提供一台无法直接访问的 Azure ，通过 `.github/workflows/*.yml` 执行所写的指令。 Azure 可以提供 Ubuntu 、 Windows 等环境。另一位同学的项目 [KiruyaMomochi/RediveExtract (github.com)](https://github.com/KiruyaMomochi/RediveExtract) 就是使用 GitHub Actions 抓取公主链接的新版本然后解包剧情推送到 Telegram Bot 上。本文主要介绍了三种框架的 Github Actions
+简单来说，GitHub Actions 可以提供一台无法直接访问的 Azure ，通过 `.github/workflows/*.yml` 执行所写的指令。 Azure 可以提供 Ubuntu 、 Windows 等环境。另一位同学的项目 [KiruyaMomochi/RediveExtract (github.com)](https://github.com/KiruyaMomochi/RediveExtract) 就是使用 GitHub Actions 抓取公主链接的新版本然后解包剧情推送到 Telegram Bot 上。甚至有人用 GitHub Actions 来自动构建 OpenWRT （[Hyy2001X/AutoBuild-Actions: 使用 Github Actions 编译 Openwrt](https://github.com/Hyy2001X/AutoBuild-Actions)）。本文主要介绍了三种框架的 GitHub Actions 。
 
 ### Jekyll
 
-Jekyll 在官方 [GitHub Actions | Jekyll • Simple, blog-aware, static sites (jekyllrb.com)](https://jekyllrb.com/docs/continuous-integration/github-actions/) 提供了 Github Actions。不过由于我的依赖和官方的 bundler 版本冲突，所以选择自己写。
+Jekyll 在官方 [GitHub Actions | Jekyll • Simple, blog-aware, static sites (jekyllrb.com)](https://jekyllrb.com/docs/continuous-integration/github-actions/) 提供了 GitHub Actions。不过由于我的依赖和官方的 bundler 版本冲突，所以选择自己写。
 
 该文件见  [jekyll-theme-mdui/.github/workflows at master · Nyovelt/jekyll-theme-mdui](https://github.com/Nyovelt/jekyll-theme-mdui/tree/master/.github/workflows)
 
