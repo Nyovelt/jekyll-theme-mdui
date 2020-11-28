@@ -12,12 +12,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          apt update
-          apt install gem git
-          gem install bundler jekyll
+          sudo apt-get update
+          sudo apt-get install gem git
+          sudo gem install bundler jekyll
       - name: Build jekyll
         run: |
           cd ${{ github.workspace }}
+          bundle install
           bundle exec jekyll Build
       - name: Git push
         run: |
