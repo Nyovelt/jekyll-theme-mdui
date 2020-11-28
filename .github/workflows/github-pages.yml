@@ -10,7 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@2.0.1
-        env:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-          JEKYLL_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
+      - name: Install dependencies
+        run: |
+          apt update
+          apt install gem git
+          gem install bundler jekyll
+      - name: Build jekyll
+        run: |
+          cd ${{ github.workspace }}
+          bundle exec jekyll Build
+      - name: Git push
+        run: |
+              git status -s
+              git config user.name 'GitHub Actions'
+              git config user.email 'nyovelt@users.noreply.github.com'
+              git commit -m "Github Actions automatic build"
+              git push
