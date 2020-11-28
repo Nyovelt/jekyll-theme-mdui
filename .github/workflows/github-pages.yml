@@ -19,11 +19,11 @@ jobs:
         run: |
           cd ${{ github.workspace }}
           bundle install
-          bundle exec jekyll Build
-      - name: Git push
-        run: |
-              git status -s
-              git config user.name 'GitHub Actions'
-              git config user.email 'nyovelt@users.noreply.github.com'
-              git commit -m "Github Actions automatic build"
-              git push
+          bundle exec jekyll build
+      
+      - name: Invoke Deployment
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _site
+        uses: JamesIves/github-pages-deploy-action@3.2.1
