@@ -33,7 +33,7 @@ Jekyll 在官方 [GitHub Actions ](https://jekyllrb.com/docs/continuous-integrat
 该文件见  [jekyll-theme-mdui/.github/workflows at master · Nyovelt/jekyll-theme-mdui](https://github.com/Nyovelt/jekyll-theme-mdui/tree/master/.github/workflows)
 
 
-```json
+```
 name: Build and deploy Jekyll site to GitHub Pages
 
 on:
@@ -49,7 +49,7 @@ on:
   - workflow_dispatch 提供了网页手动触发
   - 此外还有每按一次 star 触发 和 schedule 的按时触发
 
-```json
+```
 jobs:
   github-pages:
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
 
 - 表示使用 ubuntu-latest 作为构建机的操作系统，用 docker 的同学应该很熟悉
 
-```json
+```
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - uses: actions/cache@v1
         with:
@@ -70,7 +70,7 @@ jobs:
 
 - 由于 `bundle install`执行过程时间非常长，所以添加缓存来节省时间和公共资源。该代码块的意思是以每一个 Gemfile.lock 创建一次缓存，这样可以节省安装相应依赖所用的时间
 
-```json
+```
 
       - name: Install dependencies
         run: |
@@ -87,7 +87,7 @@ jobs:
 
 - 这两个就和正常 ubuntu 的运行命令一样了。 其中 `${{ github.workspace }}`是 GitHub Actions 的环境变量，表示了 repo 所在的目录
 
-```json
+```
       - name: Invoke Deployment
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -100,7 +100,7 @@ jobs:
 
 ### Hugo
 
-```json
+```
 name: Build and deploy Hugo site to GitHub Pages
 
 on:
@@ -142,7 +142,7 @@ jobs:
 
 - [atomicneko/deploy-pages.yml at master · amphineko/atomicneko (github.com)](https://github.com/amphineko/atomicneko/blob/master/.github/workflows/deploy-pages.yml)
 
-```json
+```
 name: Deploy to GitHub Pages
 
 on:
