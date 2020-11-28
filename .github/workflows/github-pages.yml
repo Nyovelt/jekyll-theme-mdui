@@ -4,17 +4,29 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: 0 * * * *
 
 jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      # Use GitHub Actions' cache to shorten build times and decrease load on servers
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install gem git -y
-          sudo gem install bundler:1.17.2 jekyll 
+          sudo gem install bundler:1.17.2 jekyll
+           
       - name: Build jekyll
         run: |
           cd ${{ github.workspace }}
