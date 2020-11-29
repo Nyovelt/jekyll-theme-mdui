@@ -8,22 +8,33 @@
                             {% for sns in site.data.sns %}
                             {% if sns.url != null %}
                             <div class="mdui-col-xs-4 mdui-col-sm-3 mdui-col-md-2 ">
-                                <a href="{{sns.url}}"><div class="mdui-center k-footer-icon k-{{ sns.name }}"></div></a>
+                                <a href="{{sns.url}}">
+                                    <div class="mdui-center k-footer-icon k-{{ sns.name }}"></div>
+                                </a>
                             </div>
                             {% endif %}
                             {% endfor %}
                         </div>
                     </div>
                     <div class="mdui-col mdui-text-center" style="line-height:48px">
-                        Copyright ©<script>var fd=new Date;document.write("&nbsp;"+fd.getFullYear()+"&nbsp;")</script> {{site.title}}
-                        <p style="font-size: 14px;"><span> 许可协议</span>:<i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank" class="external">"署名-非商用-相同方式享 4.0"</a>
-                        </p>
+                        Copyright ©
+                        <script>var fd = new Date; document.write("&nbsp;" + fd.getFullYear() + "&nbsp;")</script>
+                        {{site.title}}
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                                alt="Creative Commons License" style="border-width:0"
+                                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is
+                        licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                            Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
                     </div>
                     <div class="mdui-col mdui-text-center mdui-typo">
                         <div>Powered by <a href="https://jekyllrb.com">Jekyll</a></div>
                         <div>Theme <a href="https://github.com/KeJunMao/jekyll-theme-mdui">Jekyll Theme MDUI</a></div>
                         {% if site.data.site.deploy == "coding" %}
-                        <div><p class="mdui-m-b-0">Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p></div>
+                        <div>
+                            <p class="mdui-m-b-0">Hosted by <a href="https://pages.coding.me"
+                                    style="font-weight: bold">Coding Pages</a></p>
+                        </div>
                         {% endif %}
                     </div>
                 </div>
