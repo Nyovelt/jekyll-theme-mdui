@@ -9,6 +9,9 @@ describe: Netlify 要收钱了
 
 ---
 
+## Caution
+
+Due to rendering problem, some characters can't be displayed correctly by markdown ( **such as $** ). Read source code instead.
 
 ## 为什么不自己 Host 服务
 
