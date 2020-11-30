@@ -30,7 +30,7 @@ jobs:
       - name: Build jekyll
         run: |
           cd ${{ github.workspace }}
-          bundle install
+          bundle install --path vendor/bundle
           bundle exec jekyll build
       
       - name: Invoke Deployment
