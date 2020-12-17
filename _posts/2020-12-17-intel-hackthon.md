@@ -53,3 +53,13 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 
 晚上的时候， Leomond 骑平衡车刷运动世界校园的时候由于上海沉降严重路面凹凸不平导致多处皮外伤，他<del>坚持跑完了运动世界</del>后来社团寻求帮助。
 
+![](https://snz04pap002files.storage.live.com/y4mBVc33ZQPRxLrMEmLWt_9ONBMbz2979OdMKNDNmd57prp_uSGCTY4k8DV5HrtiWYAEgBr3pqGCTAIHVbS6fYl6Qz4KFtVM45wiH6HW5LAtlnqJTaVsxq0DXGebe1Kj01GCb2Y1fve0wNMYFZ6eGk05DSwrbvRDofOJVvra__9_jObxF4oNgIu-ezwLe_rwwcb?width=768&height=1024&cropmode=none)
+
+好在 ShanghaiTech 每个实验室都有 First Aid，几位大佬对急救的处理非常得当， Leomund 在学校也有常备药箱，附近实验室最近买了小米的平衡车轮椅套件，最终在凌晨3点， Leomund 回到了寝室。当晚， murez 开始训练第一个风格。
+
+赛博朋克2077 于今日8点解禁。
+
+
+
+# D-1
+
