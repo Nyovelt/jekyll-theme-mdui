@@ -100,3 +100,9 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 <iframe src="https://onedrive.live.com/embed?cid=82ADEC2E6379EBED&resid=82ADEC2E6379EBED%2167308&authkey=ABKJSWX_2yGpXN0" width="180" height="320" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 而 murez 正在努力的进行赛博朋克风格的训练。我凌晨2点左右睡觉的，后来我才知道，murez 坚持到了凌晨 5点。
+
+
+
+# D+1
+
+这一天主要是开发的收尾工作。因为前后端对接问题我背了很多锅。其中发现了 Flask 的跨域问题，因为之前没有人用过 Flask 所以踩坑时间有点旧。不过最后因为 pre 效果的关系
