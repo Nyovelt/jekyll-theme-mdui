@@ -72,4 +72,31 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 - 多个 styleGAN 模型，一些是实验室有的，一些是刚刚训练的，赛博朋克2077的模型也在当天开始训练
 - etc
 
-同时我们全部开发人员配置了连回社团的 wireguard， 并用 FRP 映射出了多台机器，这些机器z
+同时我们全部开发人员配置了连回社团的 wireguard， 并用 FRP 映射出了三台服务器。因为我们有HPC团队的成员和实验室的搬砖工。这些机器包括
+
+- 来自 HPC 的 2*64 核 AMD 处理器 + 8 * NVIDIA V100
+- 2080Ti * n
+
+光说这些资源也没什么队伍能打败我们了吧（逃
+
+乘上了3点的高铁，高铁上的网络信号还是一点都不好，导致我们睡了一路。当晚入住了中关村旁边的如家酒店，黑客松还带酒店的体验是非常好的。当晚吃了旁边的达美乐。出来以后看到酒店门口一群人在玩滑板，想到如果有一段这样的风格化视频也是很好的，于是在他们的同意之下拍了一段他们的视频。
+
+当晚继续之前的计划，应该是凌晨睡觉的。
+
+# D
+
+早上8点打车来到比赛现场，现场的早饭是星巴克的可颂，TUNA和培根，不限量供应。（所以一个队友一个早上吃了五个，值回成本）
+
+进了会场内发现周围挺空的，就我们五个人占了一桌，铺了六台电脑显得有点挤。隔壁一个上大的研究生只身前来，还没做什么准备，看到我们的架势被吓了一跳。
+
+中饭和晚饭都是自助餐，就是有些辣。
+
+晚上出门的时候还下雪了，照了一张 Google 的雪景。
+
+![](https://snz04pap002files.storage.live.com/y4mqxf5lMBeXrBXOmwqfGFmh8eiFvJe5-OSYyUlW8O-PnIhQh2tdWYRsko1lPj0S5Cxd67FUtHknEh73NtWyuNV00H4I3eQTQlll6RybBauGA7Qn5ySU6kfgdV3b2srX07rIP9wv1PaqVR4OfnwFg66ffEi0eLr9-my9IfhtGGDVsLY5yh73rSlv3_63LIjP6tI?width=1024&height=803&cropmode=none)
+
+当晚回酒店后又是很紧张的调试。 Logan 帮我解决了 Vue 的一些问题，凌晨的时候我把和后端对接的代码大致写完了。负责 pre 的队友和我们商讨 slides 和措辞，并且由同学帮助美化 slides。L 努力的优化 ffmepg 的推流，通过添加 buffer 的方法将直播帧率提高到了 512*512@17fps 。这个帧率是将源视频推流到上科大校内的某台服务器，经过处理塞进神经网络再推流回来的，所以这个成绩非常惊人了。 
+
+<iframe src="https://onedrive.live.com/embed?cid=82ADEC2E6379EBED&resid=82ADEC2E6379EBED%2167308&authkey=ABKJSWX_2yGpXN0" width="180" height="320" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+而 murez 正在努力的进行赛博朋克风格的训练。我凌晨2点左右睡觉的，后来我才知道，murez 坚持到了凌晨 5点。
