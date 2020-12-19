@@ -97,13 +97,9 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 
 当晚回酒店后又是很紧张的调试。 Logan 帮我解决了 Vue 的一些问题，凌晨的时候我把和后端对接的代码大致写完了。负责 pre 的队友和我们商讨 slides 和措辞，并且由同学帮助美化 slides。L 努力的优化 ffmepg 的推流，通过添加 buffer 的方法将直播帧率提高到了 512*512@17fps 。这个帧率是将源视频推流到上科大校内的某台服务器，经过处理塞进神经网络再推流回来的，所以这个成绩非常惊人了。 
 
-<iframe 
-    height=450 
-    width=800 
-    src="https://onedrive.live.com/embed?cid=82ADEC2E6379EBED&resid=82ADEC2E6379EBED%2167308&authkey=ABKJSWX_2yGpXN0" 
-    frameborder=0 
-    allowfullscreen>
-</iframe>
+<div>
+<iframe src="https://onedrive.live.com/embed?cid=82ADEC2E6379EBED&resid=82ADEC2E6379EBED%2167308&authkey=ABKJSWX_2yGpXN0" width="180" height="320" frameborder="0" scrolling="no" ></iframe>
+</div>
 
 
 而 murez 正在努力的进行赛博朋克风格的训练。我凌晨2点左右睡觉的，后来我才知道，murez 坚持到了凌晨 5点。
