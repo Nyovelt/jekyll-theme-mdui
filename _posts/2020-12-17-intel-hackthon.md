@@ -117,7 +117,7 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 
 
 
-商业计划在于我们是一种**低成本高质量的视频解决方案**。如果不考虑 2B 的话，我们可以在每一个热点出来的第一时间发布预训练模型，帮助其他人制作。比如 bilibili 一个热点过后，一瞬间全是相关视频了。至少现在有些制作者还在用爱剪辑，那么我们提供的一个完整易用的解决方案会让很多用户来蹭热点。一方面这部分可以直接收钱，另一方面大量的使用也会间接的推动高性能芯片的销售和迭代，，就像抖音间接推动了智能手机的普及一样。<del>不过这里估计没 intel 什么事了</del>
+商业计划在于我们是一种**低成本高质量的视频解决方案**。如果不考虑 2B 的话，我们可以在每一个热点出来的第一时间发布预训练模型，帮助其他人制作。比如 bilibili 一个热点过后，一瞬间全是相关视频了。至少现在有些制作者还在用爱剪辑，那么我们提供的一个完整易用的解决方案会让很多用户来蹭热点。一方面这部分可以直接收钱，另一方面大量的使用也会间接的推动高性能芯片的销售和迭代，，就像抖音间接推动了智能手机的普及一样。<del>不过这里估计没 intel 什么事了</del>。重要的是，这是一个基于热点话题，神经网络和硬件厂家的可以迭代的商业模式。
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TXjWvf2tOGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
