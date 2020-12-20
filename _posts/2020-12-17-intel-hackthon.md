@@ -13,7 +13,7 @@ describe:  这里竟然是大鸟转转转酒吧
 
 大约在两周前收到了来自社长的[推送](https://growthx.mysxl.cn/blog/2020-intel-open-innovation-hackathon)，正好最近想恰点钱，之前的外包也没写完，于是准备去参加。正好 DEEMOS 实验室在做 CV 相关，所以我们自然选了赛道二。
 
-![](https://snz04pap002files.storage.live.com/y4mtcABB9kMXECRJ_GAdeJZK_1CVJSkz3GHQ_swor95mB9ylzSIfpd-dkzCOJgzzAVxobUKY3DbPfDcSE3DvV-ThXLPCUvKolzJdBwD-h3ePzC4Yikt_5ESrpIdQmzqDtyGc--p2dRoP5wfzdArdeXg2RMtiICu3k2FzouF3IhRQWBQ5icNXpUD1X6VliEOb6cz?width=1080&height=708&cropmode=none)
+![](https://snz04pap002files.storage.live.com/y4mJX8lG_caQpWluBgBs8a-kzYnmMVmVVQ9mJiN7u6STtdB4Oq3ofYR3BEKKj--gwRofPJzEDtDyFUx_Ye_jvsvmRku_5adc-9EnuKzZ5IQQbTCCA6j725IVW6qh5UhQDlMegoZeMzlmbyJWM2ZiwgcZ_0eGhhT_kaMeGcztifF-m6K03l35EzN6dZk_d3glrYn?width=1080&height=708&cropmode=none)
 
 一开始的时候 intel 没有释放任何消息，不过我们猜测他们会给一个 SDK， 可能是超分辨率或者怎样的。但两周后就要参赛了，所以我们只能先找一个不错的创意。我们想到了将 UGC 用于匿名聊天，因为 DEEMOS 最近在做[人脸风格化](https://anome.geekpie.club)，而匿名聊天如果能让用户定义自己的形象，而这个形象和本人又有关联，不仅有趣还能规避一些问题。
 
@@ -103,9 +103,7 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 
 当晚回酒店后又是很紧张的调试。 Logan 帮我解决了 Vue 的一些问题，凌晨的时候我把和后端对接的代码大致写完了。负责 pre 的队友和我们商讨 slides 和措辞，并且由同学帮助美化 slides。L 努力的优化 ffmepg 的推流，通过添加 buffer 的方法将直播帧率提高到了 512*512@17fps 。这个帧率是将源视频推流到上科大校内的某台服务器，经过处理塞进神经网络再推流回来的，所以这个成绩非常惊人了。 
 
-
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TXjWvf2tOGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SytP1hhXPz4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -119,13 +117,13 @@ https://www.bilibili.com/video/BV14a4y1W7ua
 
 
 
-商业计划
+商业计划在于我们是一种**低成本高质量的视频解决方案**。如果不考虑 2B 的话，我们可以在每一个热点出来的第一时间发布预训练模型，帮助其他人制作。比如 bilibili 一个热点过后，一瞬间全是相关视频了。至少现在有些制作者还在用爱剪辑，那么我们提供的一个完整易用的解决方案会让很多用户来蹭热点。一方面这部分可以直接收钱，另一方面大量的使用也会间接的推动高性能芯片的销售和迭代，，就像抖音间接推动了智能手机的普及一样。<del>不过这里估计没 intel 什么事了</del>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TXjWvf2tOGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+在5分钟的pre里面演示了现场直播，效果还不错。其他组也有做赛博朋克风格的，但是完成度没我们高。上大的那位最后做了教育方向，希望用这个神经网络来教别人艺术。我觉得想法挺不错，demo也还可以，但是 Q&A 的时候感觉完全没答到点子上...其中还有一个公司做的是虚拟偶像。一位不太年轻的大叔在会场上公然放爱酱的视频，想做一个24小时的人工智能驱动虚拟偶像。他最后说了一句，”虚拟的偶像，不虚拟的经济“。看样子这些人还是 too old too naive 了，我觉得大部分都是泡沫（难道是我老了吗）。最后他们是第一名。
 
-最终我们的效果是[这样的](https://onedrive.live.com/embed?cid=82ADEC2E6379EBED&resid=82ADEC2E6379EBED%2167356&authkey=AA9LqBh8H-KqtZ0) ，并且在5分钟的pre里面演示了现场直播，效果还不错。其他组也有做赛博朋克风格的，但是完成度没我们高。上大的那位最后做了教育方向，希望用这个神经网络来教别人艺术。我觉得想法挺不错，demo也还可以，但是 Q&A 的时候感觉完全没答到点子上...其中还有一个公司做的是虚拟偶像。一位不太年轻的大叔在会场上公然放爱酱的视频，想做一个24小时的人工智能驱动虚拟偶像。他最后说了一句，”虚拟的偶像，不虚拟的经济“。看样子这些人还是 too old too naive 了，我觉得大部分都是泡沫（难道是我老了吗）。最后他们是第一名。
-
-
+![](https://snz04pap002files.storage.live.com/y4mkhgv1d7EvwOvzsLD5XnQnXWQ31V95yeNDqoRRrKQWsBQHfJ7nf9UxTiaDG1l_JMQk1oTy5VB9UdvNDpeLqXAFe_o2HGR8qqMyoOxbKFeKkw5D3ajuG5x9HD4gzEtXvAIoYTsbbfblpNUVEKXmaKoUzY_bdGRuxGayjlH4ZhWkj5V5Nhqr0Ek5V-ic2VcE0Do?width=1024&height=310&cropmode=none)
 
 Intel hackthon 一共有四个赛道。还有一个高二的学生一个人一组，用毫米波雷达做耳机的手势控制。其实我们觉得在耳机上加毫米波是不错的想法，如果用毫米波去扫描耳道建模就更好了，他拿了三等奖。
 
