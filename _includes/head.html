@@ -14,7 +14,7 @@
     {% endif %}
     {% if site.data.site.uiux.meng == true%}
     {% if site.data.meng.animation.switch == true %}
-    <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     {% endif %}
     {% endif %}
     <link rel="shortcut icon" href="{{ site.data.site.head.favicon }}">
@@ -28,16 +28,16 @@
         site.baseurl | prepend: site.url }}">
     <link rel="manifest" href="{{ " /manifest.json" | prepend: site.baseurl }}">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/jquery.min.js"></script>
-    <script src="https://www.jsdelivr.com/package/npm/mdui/0.3.0/js/mdui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
     <script src="{{ " /assets/js/History.js" | prepend: site.baseurl }}"></script>
 
-    <link rel="preload" href="https://www.jsdelivr.com/package/npm/mdui/0.3.0/css/mdui.min.css" as="style"
+    <link rel="preload" href="https://cdnjs.loli.net/ajax/libs/mdui/0.3.0/css/mdui.min.css" as="style"
         onload="this.rel='stylesheet'">
     <link rel="preload" href="{{ " /assets/css/global.css" | prepend: site.baseurl }}" as="style"
         onload="this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/mdui/0.3.0/css/mdui.min.css">
+        <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.3.0/css/mdui.min.css">
     </noscript>
     <noscript>
         <link rel="stylesheet" href="{{ " /assets/css/global.css" | prepend: site.baseurl }}">
@@ -90,6 +90,7 @@
         !function (a) { if (a.loadCSS) { var b = loadCSS.relpreload = {}; if (b.support = function () { try { return a.document.createElement("link").relList.supports("preload") } catch (b) { return !1 } }, b.poly = function () { for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) { var d = b[c]; "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null) } }, !b.support()) { b.poly(); var c = a.setInterval(b.poly, 300); a.addEventListener && a.addEventListener("load", function () { b.poly(), a.clearInterval(c) }), a.attachEvent && a.attachEvent("onload", function () { a.clearInterval(c) }) } } }(this); !function (a) { if (a.loadCSS) { var b = loadCSS.relpreload = {}; if (b.support = function () { try { return a.document.createElement("link").relList.supports("preload") } catch (b) { return !1 } }, b.poly = function () { for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) { var d = b[c]; "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null) } }, !b.support()) { b.poly(); var c = a.setInterval(b.poly, 300); a.addEventListener && a.addEventListener("load", function () { b.poly(), a.clearInterval(c) }), a.attachEvent && a.attachEvent("onload", function () { a.clearInterval(c) }) } } }(this);
     </script>
     {% if site.data.site.mathjax ==true %}
+
     <script
         type="text/x-mathjax-config">   MathJax.Hub.Config({
             extensions: ["tex2jax.js"],
@@ -102,7 +103,7 @@
             "HTML-CSS": { fonts: ["TeX"] }
           }); </script>
           <script type="text/javascript" async
-          src="https://www.jsdelivr.com/package/npm/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
         </script>
     {% endif %}
 </head>
