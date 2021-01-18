@@ -115,13 +115,13 @@ make install
 
 ## 参考
 
-[HPC 系列文章 (6):Slurm 部署 | Ansiz (zxh.site)](http://blog.zxh.site/2018/08/26/HPC-series-6-setup-slurm/#more)
+[HPC 系列文章 (6):Slurm 部署](http://blog.zxh.site/2018/08/26/HPC-series-6-setup-slurm/#more)
 
 [unable to 'make' slurm · Issue #12 · mknoxnv/ubuntu-slurm (github.com)](https://github.com/mknoxnv/ubuntu-slurm/issues/12)
 
 [Slurm Workload Manager - Quick Start Administrator Guide (schedmd.com)](https://slurm.schedmd.com/quickstart_admin.html)
 
-[slurm安装配置 | 尘曲的个人博客 (zhangcheng.fun)](http://zhangcheng.fun/2018/06/14/slurm安装配置/)
+[slurm安装配置 - 尘曲的个人博客 ](http://zhangcheng.fun/2018/06/14/slurm安装配置/)
 
  
 
