@@ -1,0 +1,107 @@
+---
+layout: post
+title: "CentOS8 下 slurm 的安装配置"
+date: 2021-1-18   10:02:59 +0800
+category: Technology
+tags: Linux HPC CentOS slurm 
+img: https://oss.aaaab3n.moe/uPic/6EFbA4.jpg
+describe:  CentOS8 下 slurm 的安装配置
+---
+
+
+
+**Slurm 任务调度工具**（前身为**极简Linux资源管理工具**，英文：**Simple Linux Utility for Resource Management**，取首字母，简写为**SLURM**），或 **Slurm**，是一个用于 Linux 和 Unix 内核系统的[免费、开源](https://zh.wikipedia.org/wiki/自由及开放源代码软件)的任务调度工具，被世界范围内的[超级计算机](https://zh.wikipedia.org/wiki/超级计算机)和[计算机群](https://zh.wikipedia.org/wiki/计算机集群)广泛采用。它提供了三个关键功能。第一，为用户分配一定时间的专享或非专享的资源(计算机节点)，以供用户执行工作。第二，它提供了一个框架，用于启动、执行、监测在节点上运行着的任务(通常是并行的任务，例如 [MPI](https://zh.wikipedia.org/wiki/訊息傳遞介面))，第三，为任务队列合理地分配资源。
+
+
+
+## 安装步骤
+
+系统为 **CentOS 8**, 一共有两个 node 。其中 node1 作为主节点， node2 作为计算节点。
+
+
+
+### 设置slurm账户
+
+```bash
+# 新建用户。-m 为用户创建家目录；-G wheel 将用户添加到 wheel 用户组
+useradd -m -G wheel slurm
+# 设置密码
+passwd slurm
+# 查看账户相关性喜
+id slurm
+# 所有节点的 slurm 组 id 必须一致。否则无法启动成功
+```
+
+
+
+### **安装munge**
+
+```bash
+yum -y install epel-release
+yum -y install gtk2
+yum -y install gtk-devel
+yum -y install munge
+yum -y install munge-devel
+yum -y install hdf5-devel
+```
+
+
+
+手动创建目录,这些目录在munge安装时不会自动创建，分别用于munge的配置、运行、日志等需求。
+
+```bash
+mkdir -p /etc/munge
+mkdir -p /var/run/munge
+mkdir -p /var/lib/munge
+mkdir -p /var/log/munge
+```
+
+修改上述目录的属主为 slurm
+
+```bash
+chown -R slurm:slurm /etc/munge
+chown -R slurm:slurm /var/run/munge
+chown -R slurm:slurm /var/lib/munge
+chown -R slurm:slurm /var/log/munge
+# 以下看需要，我用到了
+chown slurm:slurm /var/run/munge/munge.socket.2.lock
+chown slurm:slurm /var/log/munge/munged.log
+chown slurm:slurm /etc/munge/munge.key
+```
+
+在 master 主节点上通过**/usr/sbin/create-munge-key**命令生成 munge 密钥文件，将此文件需要存储在所有节点的 /etc/munge/ 下。
+
+使用 slurm 账户启动 munge
+
+```bash
+su slurm
+munged
+ps aux|grep munge
+# 如果发现之前已经有munge在运行了，kill掉它
+```
+
+
+
+### **安装slurm**
+
+去官网可以下载slurm的安装包。地址：https://www.schedmd.com/
+安装的方式有好几种，源码编译安装、rpm包安装这两个方式我试过，都可以。这里选择源码编译安装。
+将包使用tar命令解压，进入解压目录编译安装。这个过程需要gcc编译器。
+
+```bash
+yum install gcc
+./configure
+make -j
+make install
+# 当发现缺少 HDF5 时更改 configure 并重新编译
+# ./configure --with-hdf5=no
+# make -j
+# make install
+```
+
+
+
+### 配置 slurm
+
+ 
+
