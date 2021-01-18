@@ -99,9 +99,29 @@ make install
 # make install
 ```
 
+在 CentOS 下，安装目录在 `/usr/local/lib/slurm`
+
 
 
 ### 配置 slurm
+
+使用 [Slurm System Configuration Tool (schedmd.com)](https://slurm.schedmd.com/configurator.html) 进行文件配置，并且有简单版本[Slurm System Configuration Tool (schedmd.com)](https://slurm.schedmd.com/configurator.easy.html)
+
+配置文件在 `/usr/local/etc/slurm.conf` ，运行 `slurmctld -c` 显然。
+
+
+
+配置完成通过服务启动slurm，控制节点需要执行`slurmctld -c`和`slurmd -c`。计算节点只需要执行`slurmd -c`。 
+
+## 参考
+
+[HPC 系列文章 (6):Slurm 部署 | Ansiz (zxh.site)](http://blog.zxh.site/2018/08/26/HPC-series-6-setup-slurm/#more)
+
+[unable to 'make' slurm · Issue #12 · mknoxnv/ubuntu-slurm (github.com)](https://github.com/mknoxnv/ubuntu-slurm/issues/12)
+
+[Slurm Workload Manager - Quick Start Administrator Guide (schedmd.com)](https://slurm.schedmd.com/quickstart_admin.html)
+
+[slurm安装配置 | 尘曲的个人博客 (zhangcheng.fun)](http://zhangcheng.fun/2018/06/14/slurm安装配置/)
 
  
 
