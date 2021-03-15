@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-03-15T08:02:16+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-03-15T09:51:27+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
 
 &lt;h3 id=&quot;add&quot;&gt;ADD&lt;/h3&gt;
 
@@ -60,6 +60,14 @@ addi t0, t0, SYMBOL[11:0]
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&quot;branch&quot;&gt;Branch&lt;/h2&gt;
+
+&lt;h3 id=&quot;beq&quot;&gt;beq&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;beq x1 x2 Label1&lt;/code&gt; means &lt;code class=&quot;highlighter-rouge&quot;&gt;if(x1 == x2) goto Label1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;others&quot;&gt;Others&lt;/h2&gt;
 
