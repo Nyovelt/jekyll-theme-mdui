@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-02-22T08:10:59+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">两款SD卡的对比测试</title><link href="https://aaaab3n.moe/technology/2021/02/21/sd-card.html" rel="alternate" type="text/html" title="两款SD卡的对比测试" /><published>2021-02-21T02:02:59+00:00</published><updated>2021-02-21T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/02/21/sd-card</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/02/21/sd-card.html">&lt;p&gt;最近由于准备买 &lt;strong&gt;Sony a6100&lt;/strong&gt;，遇到了选购 sd 卡的环节。秉持着鸡蛋不能放在同一个篮子里的理念，以及考虑了UHS-I 最大速度大约在100 m/s 上下封顶，因此购买了市面上两家大厂的不同产品，分别是&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-03-15T08:02:16+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
+
+&lt;h3 id=&quot;add&quot;&gt;ADD&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;ADD x1 x0 x0&lt;/code&gt; means  &lt;code class=&quot;highlighter-rouge&quot;&gt;x1 = x0 + x0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;addi&quot;&gt;ADDI&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;ADDI x1 x0 0x11&lt;/code&gt; means &lt;code class=&quot;highlighter-rouge&quot;&gt;x1 = x0 + 3 (DEC)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The difference is that ADDI is used for numerical, while ADD is used for registers (or variable we can say)&lt;/li&gt;
+  &lt;li&gt;Normally, we can discover &lt;code class=&quot;highlighter-rouge&quot;&gt;ADDI sp sp -32 &lt;/code&gt; at the beginning of the program.  It’s used for allocate memory for the main program. &lt;code class=&quot;highlighter-rouge&quot;&gt;sp&lt;/code&gt; is the pointer of a stack, use to record the runtime memory stack.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;memory&quot;&gt;MEMORY&lt;/h2&gt;
+
+&lt;h3 id=&quot;la&quot;&gt;la&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;la&lt;/code&gt; means &lt;strong&gt;load address&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;la x1 VAL&lt;/code&gt;  VAL’s address is at &lt;code class=&quot;highlighter-rouge&quot;&gt;0x100&lt;/code&gt;, and it’s value is &lt;code class=&quot;highlighter-rouge&quot;&gt;0x11&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;x1 = 0x100&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;equal to&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-assembly&quot;&gt;lui t0, SYMBOL[31:12]
+addi t0, t0, SYMBOL[11:0]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;lw&quot;&gt;lw&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lw&lt;/code&gt; means &lt;strong&gt;load word&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;lw x2 VAL&lt;/code&gt; causes &lt;code class=&quot;highlighter-rouge&quot;&gt;x2 = 0x11&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sw&quot;&gt;sw&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sw&lt;/code&gt; means &lt;strong&gt;save word&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;sw x3 0(x1)&lt;/code&gt; will cause &lt;code class=&quot;highlighter-rouge&quot;&gt;x3 = 0x11&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;x3 = x2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;li&quot;&gt;li&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;li&lt;/code&gt; means load immediate&lt;/li&gt;
+  &lt;li&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;li a0 VAL&lt;/code&gt; means &lt;code class=&quot;highlighter-rouge&quot;&gt;a0 = VAL = 0x114514 &lt;/code&gt;for example&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;the Point is that &lt;strong&gt;L&lt;/strong&gt; means load, &lt;strong&gt;S&lt;/strong&gt; means save. **a&lt;/td&gt;
+      &lt;td&gt;b&lt;/td&gt;
+      &lt;td&gt;h&lt;/td&gt;
+      &lt;td&gt;w&lt;/td&gt;
+      &lt;td&gt;d** means address, byte, half word, word or double word.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;others&quot;&gt;Others&lt;/h2&gt;
+
+&lt;h3 id=&quot;auipc&quot;&gt;AUIPC&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AUIPC&lt;/code&gt; means add an immediate number to pc&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;auipc x28 65536&lt;/code&gt; means&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Canarypwn</name></author><category term="Technology" /><category term="RISC-V" /><summary type="html">CALCULATE</summary></entry><entry><title type="html">两款SD卡的对比测试</title><link href="https://aaaab3n.moe/technology/2021/02/21/sd-card.html" rel="alternate" type="text/html" title="两款SD卡的对比测试" /><published>2021-02-21T02:02:59+00:00</published><updated>2021-02-21T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/02/21/sd-card</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/02/21/sd-card.html">&lt;p&gt;最近由于准备买 &lt;strong&gt;Sony a6100&lt;/strong&gt;，遇到了选购 sd 卡的环节。秉持着鸡蛋不能放在同一个篮子里的理念，以及考虑了UHS-I 最大速度大约在100 m/s 上下封顶，因此购买了市面上两家大厂的不同产品，分别是&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;闪迪至尊极速 SDXC UHS-I 存储卡 64G （附赠闪迪数据修复软件）&lt;/li&gt;
@@ -1590,26 +1664,4 @@ jobs:
 
 &lt;p&gt;外界和内部的压迫使得国民中民族主义的兴起。义和团运动就是民族主义的产物，这是一次大规模的排外运动，民族主义具有现代性。&lt;strong&gt;近代民族主义&lt;/strong&gt;的序幕被拉开。&lt;/p&gt;
 
-&lt;p&gt;随着国民对于清王朝失望情绪的累积，新兴的知识分子意识到打倒清朝是国家主义的捷径。国家主义本质是国民通过契约法律授权政府管理国家事物。于此产生了&lt;strong&gt;以革命为目的的民族主义&lt;/strong&gt;。例如孙文就有着打倒清朝，成就中国的名族主义的初期理想。&lt;strong&gt;国家主义的觉醒是近代史的高潮，它最终推翻了旧帝国本身。&lt;/strong&gt;清王朝留下的丰厚遗产使得中华大地上的各种私有化武装有能力争夺产生下一个国家的机会，各种思想也在中华大地上生根发芽。这样的历史一直持续到了近代史的结束。&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="Literature" /><category term="EDU" /><summary type="html">明清历史中的国家自信与国家自觉</summary></entry><entry><title type="html">GeekPie DevOps 招新宣讲</title><link href="https://aaaab3n.moe/technology/2020/09/13/fresh.html" rel="alternate" type="text/html" title="GeekPie DevOps 招新宣讲" /><published>2020-09-13T02:01:59+00:00</published><updated>2020-09-13T02:01:59+00:00</updated><id>https://aaaab3n.moe/technology/2020/09/13/fresh</id><content type="html" xml:base="https://aaaab3n.moe/technology/2020/09/13/fresh.html">&lt;h1 id=&quot;引言&quot;&gt;引言&lt;/h1&gt;
-
-&lt;p&gt;作为一个存在了多年的，人数最多的计算机社团，我们同时运行着很多的服务。那么我们是如何确保这些服务是可用的，我们社团开发的工作流又是怎样的。&lt;/p&gt;
-
-&lt;h1 id=&quot;服务器&quot;&gt;服务器&lt;/h1&gt;
-
-&lt;p&gt;作为一个经费充裕的社团，我们在不同的地方有着不同的服务器。如何管理这些服务器，如何方便开发者简单的部署服务是Ops的工作。就目前来说，我们在上海有三台阿里云服务器，两台香港的服务器，一台青云的服务器，还有两台在校内。其中在校内的两台中的一台还没有公网ip。把这些服务器方便稳定的链接起来是运维工作的基础。我们目前使用的是Tinc VPN，它是一种mesh，当每一个新节点加入的时候，它会自动连上其他所有的服务器，这样我们的每台服务器都能与其他服务器互相连通。&lt;/p&gt;
-
-&lt;h1 id=&quot;工作流&quot;&gt;工作流&lt;/h1&gt;
-
-&lt;p&gt;开发者需要的是一个快速稳定的部署环境。运维需要一个安全便捷的管理环境。所以我们所有的服务都是基于docker的。简单的来说，docker是为了克服不同的系统环境存在的，比如同样的代码在你的电脑上跑不一定能在我的电脑上跑，docker的思想就是将你的环境和代码打包在一起，在你分享代码的时候同时包含的你跑代码的环境。Github是代码分享与管理平台，方便每个人贡献自己的代码，也方便团队进行协作。社团在Github上有一个自己的Orgnization，开发者要做的就是将docker上传到github上。剩下的全都会较为自动化完成部署。&lt;/p&gt;
-
-&lt;h1 id=&quot;技能&quot;&gt;技能&lt;/h1&gt;
-
-&lt;p&gt;作为Ops，你需要对Linux系统熟悉，因为我们大部分的服务器都是跑着Ubuntu系统的。此外我们也很环境对网络有了解的人加入我们，因为目前的组网方式依旧不够完善。如果你会写代码，我们会更加欢迎。&lt;/p&gt;
-
-&lt;h1 id=&quot;devs&quot;&gt;Devs&lt;/h1&gt;
-
-&lt;p&gt;我们既是服务的管理者又是服务的开发者。作为一个立于上科大的社团，为上科大的师生服务也是我们的使命之一。作为一个新的社团，我们更倾向于使用现代，主流，新颖的技术和工具进行开发。&lt;/p&gt;
-
-&lt;p&gt;比如镜像源网站是用vue3.0和vuetify框架进行开发的，并使用nginx作为服务器。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.murez.site/devops-2020geekpie/&quot;&gt;https://blog.murez.site/devops-2020geekpie/&lt;/a&gt;&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="Technology" /><category term="EDU" /><summary type="html">引言</summary></entry></feed>
+&lt;p&gt;随着国民对于清王朝失望情绪的累积，新兴的知识分子意识到打倒清朝是国家主义的捷径。国家主义本质是国民通过契约法律授权政府管理国家事物。于此产生了&lt;strong&gt;以革命为目的的民族主义&lt;/strong&gt;。例如孙文就有着打倒清朝，成就中国的名族主义的初期理想。&lt;strong&gt;国家主义的觉醒是近代史的高潮，它最终推翻了旧帝国本身。&lt;/strong&gt;清王朝留下的丰厚遗产使得中华大地上的各种私有化武装有能力争夺产生下一个国家的机会，各种思想也在中华大地上生根发芽。这样的历史一直持续到了近代史的结束。&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="Literature" /><category term="EDU" /><summary type="html">明清历史中的国家自信与国家自觉</summary></entry></feed>
