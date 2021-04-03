@@ -32,3 +32,18 @@ describe: Computer Architecture
 
 ## Numbers
 
+### 整数
+
+- Everything in a computer is a number, in fact only 0 and 1.
+- Integers are interpreted by adhering to fixed length
+- Negative numbers are represented with Two’s complement
+  - Overflows can be detected utilizing the carry bit
+
+- 整数分为 unsigned 和 signed, 对应原码和补码
+  - 关于补码的运算和溢出:
+    - ![Nr50nu](https://oss.aaaab3n.moe/uPic/Nr50nu.jpg)
+    - Overflow ERROR: When the result of addition exceeds the range of $[-2^{n-1},2^{n-1}-1]$
+    - Generally, 负数的二进制值要大于非负数(因为首位二进制为 1)
+    - `Unsigned` 对应 $2^n-1$
+- 
+
