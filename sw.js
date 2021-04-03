@@ -108,6 +108,8 @@ var urlsToCache = [
   
 
   
+    '/edu/2021/04/01/Computer-Architecture-Mid.html',
+  
     '/technology/2021/03/15/risc-v.html',
   
     '/technology/2021/02/21/sd-card.html',
