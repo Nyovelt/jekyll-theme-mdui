@@ -54,9 +54,19 @@ describe: Computer Architecture
 - **n bit represents $2^n$ numbers in binary**
 - 2 进制适合计算机, 10进制适合数手指, 16进制表达更方便
 
-
+- Consider `>>` operations, for signed int,  >> 0 get signed bit; for neg get -1 (-1 >> 1 = -1)
 
 - ref:
 
-1. About MSB and Overflow:	https://stackoverflow.com/questions/29330787/signed-overflow-why-carry-in-and-carry-out-of-msb-should-match
+1. [About MSB and Overflow:	](https://stackoverflow.com/questions/29330787/signed-overflow-why-carry-in-and-carry-out-of-msb-should-match)
+
+### IEEE 754 - 计算机数字标准表示
+
+- Bias: 偏移, 即在结果加上偏移指, 或者 0b0 代表了偏移值本身. e.g. 0 -> -127,  0xFF = -127 + 0xFF = -127 + 255 = 128
+
+
+
+- ref
+  1. [IEEE 754 Simulator](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+  2. 
 
