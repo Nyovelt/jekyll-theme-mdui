@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-03T07:13:33+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-03T08:04:06+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -36,14 +36,31 @@
         &lt;ul&gt;
           &lt;li&gt;&lt;img src=&quot;https://oss.aaaab3n.moe/uPic/Nr50nu.jpg&quot; alt=&quot;Nr50nu&quot; /&gt;&lt;/li&gt;
           &lt;li&gt;Overflow ERROR: When the result of addition exceeds the range of $[-2^{n-1},2^{n-1}-1]$&lt;/li&gt;
+          &lt;li&gt;Overflow occurs if and only if two numbers with &lt;strong&gt;the same sign&lt;/strong&gt; are added and the result has the opposite sign.&lt;/li&gt;
           &lt;li&gt;Generally, 负数的二进制值要大于非负数(因为首位二进制为 1)&lt;/li&gt;
           &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Unsigned&lt;/code&gt; 对应 $2^n-1$&lt;/li&gt;
+          &lt;li&gt;A &lt;strong&gt;neat trick&lt;/strong&gt; for flipping the sign of a two’s complement number:  flip all thebits and add 1.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;2 problems (in 6-bit binary):
+        &lt;ul&gt;
+          &lt;li&gt;&lt;img src=&quot;https://oss.aaaab3n.moe/uPic/N9vNwe.jpg&quot; alt=&quot;N9vNwe&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Canarypwn</name></author><category term="EDU" /><category term="EDU" /><summary type="html">Intro</summary></entry><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
+  &lt;li&gt;The decoding and encoding system are human-defined, so that it can represent any number as wished. That is, no largest interger represent by n-bit numbers&lt;/li&gt;
+  &lt;li&gt;$\bar{x} + x + 1 = 0 $ because of &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;n bit represents $2^n$ numbers in binary&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;2 进制适合计算机, 10进制适合数手指, 16进制表达更方便&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ref:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;About MSB and Overflow:	https://stackoverflow.com/questions/29330787/signed-overflow-why-carry-in-and-carry-out-of-msb-should-match&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Canarypwn</name></author><category term="EDU" /><category term="EDU" /><summary type="html">Intro</summary></entry><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
 
 &lt;h3 id=&quot;add&quot;&gt;ADD&lt;/h3&gt;
 
