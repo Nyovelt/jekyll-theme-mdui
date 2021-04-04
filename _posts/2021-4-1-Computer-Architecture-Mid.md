@@ -113,19 +113,28 @@ describe: Computer Architecture
 - 程序一共有四块内存区
   - 栈：存放局部变量
     - return address, arguments, local variables
+    - Constants
     - see [编译时你在做什么？有没有空？可以来拯救吗？](https://aaaab3n.moe/technology/2019/11/29/c-cpp-black-magic.html)
   - 堆：存放动态变量 - difficult to manage
     - malloc
     - calloc
     - free
     - realloc
+    - 
   - 静态：存放 functions 之外的变量
+    - Static variables
+    - Global variables
+    - Constants
+    - String Literals
   - 代码：当程序运行时存储，不可更改
+    - Machine Instructions
+    - Constants
   - ![](https://snz04pap002files.storage.live.com/y4ms7978SdKAnRisT2pTi3Dt7K-57msUyxYmihpxd3Op6N3vVU322DnJGUOYX8xrL9gEoZe0CeXa8JK4O1wp3TbenlHKWoIBk1EW_AukWnx-hDhpUcdGxPZ5-mmaqwBGhpx1lV4dsgRKmhXNSuoMKAqnOphlOLlK4T5Yy-Q194wF6J9Nt284s9mLD1bfdaMg6Ek?width=784&height=858&cropmode=none)
 
 - string:
 
   - ```a = malloc(sizeof((char))* strlen(b)+1)```
+    - pay attention to **+1s**
   - `strcpy(a,b)` 不安全， 因为不知道结尾(\0)
   - `strncpy(a,b, strlen(b)+1)`安全。  if its too short it will not copy the null terminator!
 
