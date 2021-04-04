@@ -85,7 +85,7 @@ describe: Computer Architecture
 - 运算无交换律
 - 最大整数: 0b0 11111110 全1， 因为指数位全1的话会变成 inf
 - 计算方法: e.g. 53.125 =? 110101.001 => $1.10101001 * 2^5$ => 127 + 5 = 132 = 10000100 => 0 10000100 10101001 000000..
-- 加减法： (https://www.youtube.com/watch?v=wC950FKNl8Y)[https://www.youtube.com/watch?v=wC950FKNl8Y]
+- 加减法： [https://www.youtube.com/watch?v=wC950FKNl8Y](https://www.youtube.com/watch?v=wC950FKNl8Y)
 - ref
   1. [IEEE 754 Simulator](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
   2. 
@@ -165,4 +165,27 @@ describe: Computer Architecture
     ```
 
   - 
+
+## RISC-V
+
+### Instructions
+
+- ![](https://snz04pap002files.storage.live.com/y4mwCiM1SDGRlQ1V0upPdLAAdT0SGq8eQbvbgdNV7RogPurxVjCRvqXCPaoUTJretOunNk8Ty6PlCZR18DdfV_1mi7woJi0WkqK0XVqcwZdCstrBc0UowRJ9Xwo2IMF8vMph-gaUcEXm3B8k1w0VcSYN6AYnVXcLhAXLMBdWy_qzpdM6qs7xJdkxzNk9Tut7SLz?width=1816&height=534&cropmode=none)
+
+### Immediates
+
+- An I-type instruction can only have 12 bits of immediate
+  - Bits 31:12 get the same value as Bit 11
+- RISC-V immediates are "sign extended"
+  - 首位为符号位
+
+
+
+### Little Eddiem
+
+- ![](https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&height=1184&cropmode=none)
+  - 小端序： ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/280px-Little-Endian.svg.png)
+  - 自下而上的存储， 前面的在下面。 寄存器从下而上数。
+  - 0x8f5 为负数(itype 指令只有12位， 因此大于 0x7ff 的都是负数)， 因此扩写成16位(因为寄存器为32位)的补码
+    - 0xfffff8f5 (两者取反 加一 值相同)
 
