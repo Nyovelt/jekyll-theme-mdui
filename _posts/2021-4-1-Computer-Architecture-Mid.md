@@ -62,10 +62,28 @@ describe: Computer Architecture
 
 ### IEEE 754 - 计算机数字标准表示
 
-- Bias: 偏移, 即在结果加上偏移指, 或者 0b0 代表了偏移值本身. e.g. 0 -> -127,  0xFF = -127 + 0xFF = -127 + 255 = 128
-
-
-
+- Bias: 偏移, 即在结果加上偏移指, 或者 0b0 代表了偏移值本身. e.g. 0 -> -127,  0xFF = -127 + 0xFF = -127 + 255 = 128 (IEEE 754)
+- 第一位为符号位S。 接下来八位为指数位E，剩下23位为分数位F (32 位)
+  - $ (-1)^s \times (1+F) \times 2^E $
+-  大小比较：
+  - 首先按照指数排序， 再按照尾数排序
+- 64位系统中: 1 位符号位， 11位指数位， 52位小数位 (double)
+- 当指数位
+- Overflow: 
+  - 在极大值的情况下会在指数位上溢出
+  - 在极小值的情况下会在指数位下溢出
+- 特殊情况： 
+  - 指数位全0： 极小数
+  - 指数位全1, 小数位全0： Infinity 符号根据符号位确定
+  - 全0: 0 , 符号位不确定
+  - $ \infin - \infin , 0-0 $:  可正可负，指数位全1， **小数位不确定** => NaN
+  - ![](https://snz04pap002files.storage.live.com/y4m6TNxePdpVx9OzxurZtXVgs0-3fOLclDH0k7i6GFR3uBJmyk8ExJerz1sM9rEUi2gDGXBNU2NHWYYn7cmpsI04cntU594NFCKadeg1W7veTAX8Nrp8zBbop67NuExwcynOXvvd7VlJ-B1zwI3YedANrzaQK6GW0eWPzGDp22_UNnaiwo4neyy6yF2lyUlivRI?width=1074&height=354&cropmode=none)
+  - ![](https://snz04pap002files.storage.live.com/y4m8LUJ7roIO6DfM8Bg74PzkjMI4rDQkW8wQUEOG86Ic1f9Zp3McDQKf7S3H_CwDY-h4dAeEJmNOOTr0QSF8xyLlBBCpB2eq0aawyEuDJ9ELdyJRghZMKfiISI-ozXtr9kkbT1D0rbjuCvGLv5-4ywitiilZbjrblsxFmp3dGvRdm6q2TqhQnoEJZX26KKcVHBk?width=1468&height=400&cropmode=none)
+- 浮点数不精确
+- NaN 不可比较 (仅仅在 NaN $\neq$ x 时成立)
+- Smallest Gap: $2^{-149} = 2^{-23}*2^{-126}$
+- 运算无交换律
+- 最大整数: 0b0 11111110 全1， 因为指数位全1的话会变成 inf
 - ref
   1. [IEEE 754 Simulator](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
   2. 
