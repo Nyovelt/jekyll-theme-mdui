@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-04T09:27:51+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-04T16:14:37+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -106,6 +106,109 @@
       &lt;li&gt;&lt;a href=&quot;https://www.h-schmidt.net/FloatConverter/IEEE754.html&quot;&gt;IEEE 754 Simulator&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;/li&gt;
     &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;c-simple&quot;&gt;C Simple&lt;/h2&gt;
+
+&lt;h3 id=&quot;pointers&quot;&gt;Pointers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dangling references&lt;/li&gt;
+  &lt;li&gt;memory leaks&lt;/li&gt;
+  &lt;li&gt;C 是一个弱类型语言， 也就是说对于每一个类型，结构， 对于其边界没有严格的检查。对于指针也是这样， C将自由和信任交到了程序员手上， 因此会产生很多不安全的内存访问行为。
+    &lt;ul&gt;
+      &lt;li&gt;而 Rua st 则添加了诸多限制。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;函数指针：
+    &lt;ul&gt;
+      &lt;li&gt;char *foo(args)&lt;/li&gt;
+      &lt;li&gt;f = &amp;amp;foo
+        &lt;ul&gt;
+          &lt;li&gt;能被取地址&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;(*f)(“cat”, 3)
+        &lt;ul&gt;
+          &lt;li&gt;能被调用， 返回 char*&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tricky:
+    &lt;ul&gt;
+      &lt;li&gt;int* a[10]; =&amp;gt; a is an array of pointers&lt;/li&gt;
+      &lt;li&gt;int *a, b; =&amp;gt; a is pointer, b is integer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;memory&quot;&gt;Memory&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;程序一共有四块内存区
+    &lt;ul&gt;
+      &lt;li&gt;栈：存放局部变量
+        &lt;ul&gt;
+          &lt;li&gt;return address, arguments, local variables&lt;/li&gt;
+          &lt;li&gt;see &lt;a href=&quot;https://aaaab3n.moe/technology/2019/11/29/c-cpp-black-magic.html&quot;&gt;编译时你在做什么？有没有空？可以来拯救吗？&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;堆：存放动态变量 - difficult to manage
+        &lt;ul&gt;
+          &lt;li&gt;malloc&lt;/li&gt;
+          &lt;li&gt;calloc&lt;/li&gt;
+          &lt;li&gt;free&lt;/li&gt;
+          &lt;li&gt;realloc&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;静态：存放 functions 之外的变量&lt;/li&gt;
+      &lt;li&gt;代码：当程序运行时存储，不可更改&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4ms7978SdKAnRisT2pTi3Dt7K-57msUyxYmihpxd3Op6N3vVU322DnJGUOYX8xrL9gEoZe0CeXa8JK4O1wp3TbenlHKWoIBk1EW_AukWnx-hDhpUcdGxPZ5-mmaqwBGhpx1lV4dsgRKmhXNSuoMKAqnOphlOLlK4T5Yy-Q194wF6J9Nt284s9mLD1bfdaMg6Ek?width=784&amp;amp;height=858&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;string:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;a = malloc(sizeof((char))* strlen(b)+1)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;strcpy(a,b)&lt;/code&gt; 不安全， 因为不知道结尾(\0)&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;strncpy(a,b, strlen(b)+1)&lt;/code&gt;安全。  if its too short it will not copy the null terminator!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Union&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;hold different types in &lt;strong&gt;the same location&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;也就是说会存在&lt;strong&gt;内存复写&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;size为最大数据结构的大写， 对齐到 4k ， 例如 char 虽然是 1 字节， 但 union 会 size = 4&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/&quot;&gt;https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/&lt;/a&gt; Q8 is worth doing Q19 helps understanding&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+union a{
+    char b[6];
+    char c[9];
+} data;
+    
+int main(){
+    // char d[7];
+    union a A = {&quot;abcdef&quot;};
+    strcpy(A.c, &quot;12345678&quot;);
+    printf(&quot;%s&quot;, A.b);
+}
+    
+output is 12345678
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Canarypwn</name></author><category term="EDU" /><category term="EDU" /><summary type="html">Intro</summary></entry><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
 
