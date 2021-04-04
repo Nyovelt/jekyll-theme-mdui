@@ -90,3 +90,70 @@ describe: Computer Architecture
   1. [IEEE 754 Simulator](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
   2. 
 
+## C Simple
+
+### Pointers
+
+- Dangling references
+- memory leaks
+- C 是一个弱类型语言， 也就是说对于每一个类型，结构， 对于其边界没有严格的检查。对于指针也是这样， C将自由和信任交到了程序员手上， 因此会产生很多不安全的内存访问行为。
+  - 而 Rua st 则添加了诸多限制。
+- 函数指针：
+  - char *foo(args)
+  - f = &foo 
+    - 能被取地址
+  - (*f)("cat", 3)
+    - 能被调用， 返回 char*
+- Tricky:
+  - int* a[10]; => a is an array of pointers
+  - int *a, b; => a is pointer, b is integer
+
+### Memory
+
+- 程序一共有四块内存区
+  - 栈：存放局部变量
+    - return address, arguments, local variables
+    - see [编译时你在做什么？有没有空？可以来拯救吗？](https://aaaab3n.moe/technology/2019/11/29/c-cpp-black-magic.html)
+  - 堆：存放动态变量 - difficult to manage
+    - malloc
+    - calloc
+    - free
+    - realloc
+  - 静态：存放 functions 之外的变量
+  - 代码：当程序运行时存储，不可更改
+  - ![](https://snz04pap002files.storage.live.com/y4ms7978SdKAnRisT2pTi3Dt7K-57msUyxYmihpxd3Op6N3vVU322DnJGUOYX8xrL9gEoZe0CeXa8JK4O1wp3TbenlHKWoIBk1EW_AukWnx-hDhpUcdGxPZ5-mmaqwBGhpx1lV4dsgRKmhXNSuoMKAqnOphlOLlK4T5Yy-Q194wF6J9Nt284s9mLD1bfdaMg6Ek?width=784&height=858&cropmode=none)
+
+- string:
+
+  - ```a = malloc(sizeof((char))* strlen(b)+1)```
+  - `strcpy(a,b)` 不安全， 因为不知道结尾(\0)
+  - `strncpy(a,b, strlen(b)+1)`安全。  if its too short it will not copy the null terminator!
+
+- Union
+
+  - hold different types in **the same location**
+  - 也就是说会存在**内存复写**
+  - size为最大数据结构的大写， 对齐到 4k ， 例如 char 虽然是 1 字节， 但 union 会 size = 4
+
+  - [https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/](https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/) Q8 is worth doing Q19 helps understanding
+
+  - ```C
+    #include <stdio.h>
+    #include <string.h>
+    union a{
+        char b[6];
+        char c[9];
+    } data;
+    
+    int main(){
+        // char d[7];
+        union a A = {"abcdef"};
+        strcpy(A.c, "12345678");
+        printf("%s", A.b);
+    }
+    
+    output is 12345678
+    ```
+
+  - 
+
