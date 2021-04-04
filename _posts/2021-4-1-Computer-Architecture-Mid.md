@@ -84,6 +84,8 @@ describe: Computer Architecture
 - Smallest Gap: $2^{-149} = 2^{-23}*2^{-126}$
 - 运算无交换律
 - 最大整数: 0b0 11111110 全1， 因为指数位全1的话会变成 inf
+- 计算方法: e.g. 53.125 =? 110101.001 => $1.10101001 * 2^5$ => 127 + 5 = 132 = 10000100 => 0 10000100 10101001 000000..
+- 加减法： (https://www.youtube.com/watch?v=wC950FKNl8Y)[https://www.youtube.com/watch?v=wC950FKNl8Y]
 - ref
   1. [IEEE 754 Simulator](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
   2. 
