@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-03T11:00:34+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-04T09:10:15+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -68,11 +68,38 @@
 &lt;h3 id=&quot;ieee-754---计算机数字标准表示&quot;&gt;IEEE 754 - 计算机数字标准表示&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Bias: 偏移, 即在结果加上偏移指, 或者 0b0 代表了偏移值本身. e.g. 0 -&amp;gt; -127,  0xFF = -127 + 0xFF = -127 + 255 = 128&lt;/p&gt;
+  &lt;li&gt;Bias: 偏移, 即在结果加上偏移指, 或者 0b0 代表了偏移值本身. e.g. 0 -&amp;gt; -127,  0xFF = -127 + 0xFF = -127 + 255 = 128 (IEEE 754)&lt;/li&gt;
+  &lt;li&gt;第一位为符号位S。 接下来八位为指数位E，剩下23位为分数位F (32 位)
+    &lt;ul&gt;
+      &lt;li&gt;$ (-1)^s \times (1+F) \times 2^E $&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;ref&lt;/p&gt;
+  &lt;li&gt;大小比较：&lt;/li&gt;
+  &lt;li&gt;首先按照指数排序， 再按照尾数排序&lt;/li&gt;
+  &lt;li&gt;64位系统中: 1 位符号位， 11位指数位， 52位小数位 (double)&lt;/li&gt;
+  &lt;li&gt;当指数位&lt;/li&gt;
+  &lt;li&gt;Overflow:
+    &lt;ul&gt;
+      &lt;li&gt;在极大值的情况下会在指数位上溢出&lt;/li&gt;
+      &lt;li&gt;在极小值的情况下会在指数位下溢出&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;特殊情况：
+    &lt;ul&gt;
+      &lt;li&gt;指数位全0： 极小数&lt;/li&gt;
+      &lt;li&gt;指数位全1, 小数位全0： Infinity 符号根据符号位确定&lt;/li&gt;
+      &lt;li&gt;全0: 0 , 符号位不确定&lt;/li&gt;
+      &lt;li&gt;$ \infin - \infin , 0-0 $:  可正可负，指数位全1， &lt;strong&gt;小数位不确定&lt;/strong&gt; =&amp;gt; NaN&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4m6TNxePdpVx9OzxurZtXVgs0-3fOLclDH0k7i6GFR3uBJmyk8ExJerz1sM9rEUi2gDGXBNU2NHWYYn7cmpsI04cntU594NFCKadeg1W7veTAX8Nrp8zBbop67NuExwcynOXvvd7VlJ-B1zwI3YedANrzaQK6GW0eWPzGDp22_UNnaiwo4neyy6yF2lyUlivRI?width=1074&amp;amp;height=354&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4m8LUJ7roIO6DfM8Bg74PzkjMI4rDQkW8wQUEOG86Ic1f9Zp3McDQKf7S3H_CwDY-h4dAeEJmNOOTr0QSF8xyLlBBCpB2eq0aawyEuDJ9ELdyJRghZMKfiISI-ozXtr9kkbT1D0rbjuCvGLv5-4ywitiilZbjrblsxFmp3dGvRdm6q2TqhQnoEJZX26KKcVHBk?width=1468&amp;amp;height=400&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;浮点数不精确&lt;/li&gt;
+  &lt;li&gt;NaN 不可比较 (仅仅在 NaN $\neq$ x 时成立)&lt;/li&gt;
+  &lt;li&gt;Smallest Gap: $2^{-149} = 2^{-23}*2^{-126}$&lt;/li&gt;
+  &lt;li&gt;运算无交换律&lt;/li&gt;
+  &lt;li&gt;最大整数: 0b0 11111110 全1， 因为指数位全1的话会变成 inf&lt;/li&gt;
+  &lt;li&gt;ref
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;https://www.h-schmidt.net/FloatConverter/IEEE754.html&quot;&gt;IEEE 754 Simulator&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;/li&gt;
