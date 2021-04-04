@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-04T16:27:54+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-04T17:46:03+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -100,7 +100,7 @@
   &lt;li&gt;运算无交换律&lt;/li&gt;
   &lt;li&gt;最大整数: 0b0 11111110 全1， 因为指数位全1的话会变成 inf&lt;/li&gt;
   &lt;li&gt;计算方法: e.g. 53.125 =? 110101.001 =&amp;gt; $1.10101001 * 2^5$ =&amp;gt; 127 + 5 = 132 = 10000100 =&amp;gt; 0 10000100 10101001 000000..&lt;/li&gt;
-  &lt;li&gt;加减法： (https://www.youtube.com/watch?v=wC950FKNl8Y)[https://www.youtube.com/watch?v=wC950FKNl8Y]&lt;/li&gt;
+  &lt;li&gt;加减法： &lt;a href=&quot;https://www.youtube.com/watch?v=wC950FKNl8Y&quot;&gt;https://www.youtube.com/watch?v=wC950FKNl8Y&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;ref
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;https://www.h-schmidt.net/FloatConverter/IEEE754.html&quot;&gt;IEEE 754 Simulator&lt;/a&gt;&lt;/li&gt;
@@ -226,6 +226,45 @@ output is 12345678
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;risc-v&quot;&gt;RISC-V&lt;/h2&gt;
+
+&lt;h3 id=&quot;instructions&quot;&gt;Instructions&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mwCiM1SDGRlQ1V0upPdLAAdT0SGq8eQbvbgdNV7RogPurxVjCRvqXCPaoUTJretOunNk8Ty6PlCZR18DdfV_1mi7woJi0WkqK0XVqcwZdCstrBc0UowRJ9Xwo2IMF8vMph-gaUcEXm3B8k1w0VcSYN6AYnVXcLhAXLMBdWy_qzpdM6qs7xJdkxzNk9Tut7SLz?width=1816&amp;amp;height=534&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;immediates&quot;&gt;Immediates&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An I-type instruction can only have 12 bits of immediate
+    &lt;ul&gt;
+      &lt;li&gt;Bits 31:12 get the same value as Bit 11&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RISC-V immediates are “sign extended”
+    &lt;ul&gt;
+      &lt;li&gt;首位为符号位&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;little-eddiem&quot;&gt;Little Eddiem&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&amp;amp;height=1184&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;小端序： &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/280px-Little-Endian.svg.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;自下而上的存储， 前面的在下面。 寄存器从下而上数。&lt;/li&gt;
+      &lt;li&gt;0x8f5 为负数(itype 指令只有12位， 因此大于 0x7ff 的都是负数)， 因此扩写成16位(因为寄存器为32位)的补码
+        &lt;ul&gt;
+          &lt;li&gt;0xfffff8f5 (两者取反 加一 值相同)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Canarypwn</name></author><category term="EDU" /><category term="EDU" /><summary type="html">Intro</summary></entry><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
