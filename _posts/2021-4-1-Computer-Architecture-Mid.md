@@ -239,7 +239,9 @@ describe: Computer Architecture
         C
     ```
   
-    - 
+    - char[] 类型或者数组类型也是自上而下的， 因此在内存中从上往下是 'A', 'B', 'C'。 int 按照小端序读是从下往上读，从左往右的拼接数字，所以是 '\0''C''B''A' = 0x00434241 = 4407873(D)
+  
+  - 如果感觉自己被加强了，可以试试 [3(b)](https://robotics.shanghaitech.edu.cn/courses/ca/20s/notes/midterm_sol.pdf)
 
 ## RISC-V
 
