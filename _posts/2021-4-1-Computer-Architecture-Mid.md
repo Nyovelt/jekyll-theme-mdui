@@ -188,7 +188,7 @@ describe: Computer Architecture
     printf("%d\n", y.data.d);
     }
     
-    
+    // result is proved by gcc, clang, msvc on x86 devices
     [Running]  gcc test.c -o test && test
     43690
     56491
@@ -209,6 +209,37 @@ describe: Computer Architecture
     ```
   
     - 由此可见， 结构体中的类型是自上而下的，而小端序是先下后上的。于是产生了 x 反而对应末尾的2字节。
+  
+  - ```C
+    #include <stdio.h>
+    #include <string.h>
+    typedef union {
+        char d[4];
+        int e;
+        struct {
+            char a;
+            char b;
+            char c;
+        } data;
+    } Datatype;
+    
+    int main(){
+    Datatype y;
+    strcpy(y.d, "ABC");
+    printf("%d\n", y.e);
+    printf("%c\n", y.data.a);
+    printf("%c\n", y.data.b);
+    printf("%c\n", y.data.c);
+    }
+    
+    Result:
+        4407873 //0x434241
+        A			
+        B
+        C
+    ```
+  
+    - 
 
 ## RISC-V
 
