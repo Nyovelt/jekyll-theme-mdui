@@ -141,11 +141,13 @@ describe: Computer Architecture
 - Union
 
   - hold different types in **the same location**
+  
   - 也就是说会存在**内存复写**
+
   - size为最大数据结构的大写， 对齐到 4k ， 例如 char 虽然是 1 字节， 但 union 会 size = 4
 
   - [https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/](https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/) Q8 is worth doing Q19 helps understanding
-
+  
   - ```C
     #include <stdio.h>
     #include <string.h>
@@ -161,10 +163,52 @@ describe: Computer Architecture
         printf("%s", A.b);
     }
     
-    output is 12345678
+  output is 12345678
     ```
-
-  - 
+  
+  - ```C
+    #include <stdio.h>
+    #include <string.h>
+    typedef union {
+        unsigned long long num;
+        struct {
+            unsigned short a;
+            unsigned short b;
+            unsigned short c;
+            unsigned short d;
+        } data;
+    } Datatype;
+    
+    int main(){
+    Datatype y;
+    y.num= 0xABCDDCBADCABAAAA;
+    printf("%d\n", y.data.a);
+    printf("%d\n", y.data.b);
+    printf("%d\n", y.data.c);
+    printf("%d\n", y.data.d);
+    }
+    
+    
+    [Running]  gcc test.c -o test && test
+    43690
+    56491
+    56506
+    43981
+    [Done] exited with code=0 in 1.206 seconds
+    
+    >>> 0xABCD
+    43981
+    >>> 0xDCBA
+    56506
+    >>> 0xDCAB
+    56491
+    >>> 0xAAAA
+    43690
+    >>>
+    
+    ```
+  
+    - 由此可见， 结构体中的类型是自上而下的，而小端序是先下后上的。于是产生了 x 反而对应末尾的2字节。
 
 ## RISC-V
 
