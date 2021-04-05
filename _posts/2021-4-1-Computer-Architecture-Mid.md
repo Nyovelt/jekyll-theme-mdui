@@ -260,6 +260,8 @@ describe: Computer Architecture
 - `jr ra`: when some functions is called somewhere, in order to continue running programme, use jr ra to move to ra, and continue programme. 用于返回。 和 `jal`配合使用
 - `jal`: jumo and link, 给 `ra`赋值， 这样函数就知道回到哪里了
 - `j`: jal x0 offset 不记录返回值
+- 伪指令
+  - ![](https://snz04pap002files.storage.live.com/y4mfcArPm5wbrtiaGxz8iuy9UamZmb45wPwZh9IrUV0iD4f1xZx3jar9u_1Rj64Xh68hYgnQAwjeC31ONDkCGZtvfYJvGS2csyyMCCcdHkPd5LUTfFAvWLPIiOp_lfsDr9sS29iE7_7DH_PS9l37yCp5vpRNFh9dkHq3CFEP9shv1Be1Vo3zMK3Y13EUD05ak4N?width=1920&height=1440&cropmode=none)
 
 ### Immediates
 
