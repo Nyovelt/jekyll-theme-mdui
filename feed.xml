@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T06:09:08+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T06:22:18+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -253,7 +253,7 @@ union a{
   printf(&quot;%d\n&quot;, y.data.d);
   }
     
-    
+  // result is proved by gcc, clang, msvc on x86 devices
   [Running]  gcc test.c -o test &amp;amp;&amp;amp; test
   43690
   56491
@@ -274,7 +274,42 @@ union a{
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;由此可见， 结构体中的类型是自上而下的，而小端序是先下后上的。于是产生了 x 反而对应末尾的2字节。&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;由此可见， 结构体中的类型是自上而下的，而小端序是先下后上的。于是产生了 x 反而对应末尾的2字节。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+typedef union {
+    char d[4];
+    int e;
+    struct {
+        char a;
+        char b;
+        char c;
+    } data;
+} Datatype;
+    
+int main(){
+Datatype y;
+strcpy(y.d, &quot;ABC&quot;);
+printf(&quot;%d\n&quot;, y.e);
+printf(&quot;%c\n&quot;, y.data.a);
+printf(&quot;%c\n&quot;, y.data.b);
+printf(&quot;%c\n&quot;, y.data.c);
+}
+    
+Result:
+    4407873 //0x434241
+    A			
+    B
+    C
+&lt;/code&gt;&lt;/pre&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
