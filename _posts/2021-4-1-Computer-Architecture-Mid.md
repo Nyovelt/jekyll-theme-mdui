@@ -249,6 +249,18 @@ describe: Computer Architecture
 
 - ![](https://snz04pap002files.storage.live.com/y4mwCiM1SDGRlQ1V0upPdLAAdT0SGq8eQbvbgdNV7RogPurxVjCRvqXCPaoUTJretOunNk8Ty6PlCZR18DdfV_1mi7woJi0WkqK0XVqcwZdCstrBc0UowRJ9Xwo2IMF8vMph-gaUcEXm3B8k1w0VcSYN6AYnVXcLhAXLMBdWy_qzpdM6qs7xJdkxzNk9Tut7SLz?width=1816&height=534&cropmode=none)
 
+- Techniques:
+  - *=-1: 取反加一
+  - 寄存器置零： xor zero
+- 函数调用
+  - a0 - a7: arguments
+  - a0, a1: return value
+  - sp: 栈指针
+  - when jal to functions, a0-a7, t0-t6, ra need to save, since they can be modified during callee
+- `jr ra`: when some functions is called somewhere, in order to continue running programme, use jr ra to move to ra, and continue programme. 用于返回。 和 `jal`配合使用
+- `jal`: jumo and link, 给 `ra`赋值， 这样函数就知道回到哪里了
+- `j`: jal x0 offset 不记录返回值
+
 ### Immediates
 
 - An I-type instruction can only have 12 bits of immediate
@@ -261,8 +273,11 @@ describe: Computer Architecture
 ### Little Eddiem
 
 - ![](https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&height=1184&cropmode=none)
+
   - 小端序： ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/280px-Little-Endian.svg.png)
   - 自下而上的存储， 前面的在下面。 寄存器从下而上数。
   - 0x8f5 为负数(itype 指令只有12位， 因此大于 0x7ff 的都是负数)， 因此扩写成16位(因为寄存器为32位)的补码
     - 0xfffff8f5 (两者取反 加一 值相同)
+
+  
 
