@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T06:23:33+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T08:14:20+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -320,7 +320,26 @@ Result:
 &lt;h3 id=&quot;instructions&quot;&gt;Instructions&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mwCiM1SDGRlQ1V0upPdLAAdT0SGq8eQbvbgdNV7RogPurxVjCRvqXCPaoUTJretOunNk8Ty6PlCZR18DdfV_1mi7woJi0WkqK0XVqcwZdCstrBc0UowRJ9Xwo2IMF8vMph-gaUcEXm3B8k1w0VcSYN6AYnVXcLhAXLMBdWy_qzpdM6qs7xJdkxzNk9Tut7SLz?width=1816&amp;amp;height=534&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mwCiM1SDGRlQ1V0upPdLAAdT0SGq8eQbvbgdNV7RogPurxVjCRvqXCPaoUTJretOunNk8Ty6PlCZR18DdfV_1mi7woJi0WkqK0XVqcwZdCstrBc0UowRJ9Xwo2IMF8vMph-gaUcEXm3B8k1w0VcSYN6AYnVXcLhAXLMBdWy_qzpdM6qs7xJdkxzNk9Tut7SLz?width=1816&amp;amp;height=534&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Techniques:
+    &lt;ul&gt;
+      &lt;li&gt;*=-1: 取反加一&lt;/li&gt;
+      &lt;li&gt;寄存器置零： xor zero&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;函数调用
+    &lt;ul&gt;
+      &lt;li&gt;a0 - a7: arguments&lt;/li&gt;
+      &lt;li&gt;a0, a1: return value&lt;/li&gt;
+      &lt;li&gt;sp: 栈指针&lt;/li&gt;
+      &lt;li&gt;when jal to functions, a0-a7, t0-t6, ra need to save, since they can be modified during callee&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jr ra&lt;/code&gt;: when some functions is called somewhere, in order to continue running programme, use jr ra to move to ra, and continue programme. 用于返回。 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;jal&lt;/code&gt;配合使用&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jal&lt;/code&gt;: jumo and link, 给 &lt;code class=&quot;highlighter-rouge&quot;&gt;ra&lt;/code&gt;赋值， 这样函数就知道回到哪里了&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;: jal x0 offset 不记录返回值&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;immediates&quot;&gt;Immediates&lt;/h3&gt;
@@ -341,7 +360,9 @@ Result:
 &lt;h3 id=&quot;little-eddiem&quot;&gt;Little Eddiem&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&amp;amp;height=1184&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&amp;amp;height=1184&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
     &lt;ul&gt;
       &lt;li&gt;小端序： &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/280px-Little-Endian.svg.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;自下而上的存储， 前面的在下面。 寄存器从下而上数。&lt;/li&gt;
