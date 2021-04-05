@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T08:14:20+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T09:03:49+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -360,9 +360,7 @@ Result:
 &lt;h3 id=&quot;little-eddiem&quot;&gt;Little Eddiem&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&amp;amp;height=1184&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
+  &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mT2S6RrFDKQJmTzbD0r-zFNd4ybshNaFhCiNnpCpgDarK_egSY5EirDubpuId2ljjU4s4rSfQ7thLe7LW5FI86KIudWsqymgp_6coO0D4jCGkYnc6cUPBF0DratTKLlZ8UJV2LWBZJgt_QXby0mOCcC65TDrXzgpe1kni14q0dYHvpVDyKzwcXTkF2nRSYnR9?width=2098&amp;amp;height=1184&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;
     &lt;ul&gt;
       &lt;li&gt;小端序： &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Little-Endian.svg/280px-Little-Endian.svg.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;自下而上的存储， 前面的在下面。 寄存器从下而上数。&lt;/li&gt;
@@ -373,7 +371,28 @@ Result:
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Canarypwn</name></author><category term="EDU" /><category term="EDU" /><summary type="html">Intro</summary></entry><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;types&quot;&gt;Types&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4m6bArYGFBiAHqyJvsp3OGJ_HLK-fgf4EJj5kOFUSGTWKBTkw0aQ6l-rkjdCHTfljQ430peJcBgMHS6i9BcNiWFyAlPFstoe5zNJV2jzYKJyNZH_IeyhxxUiAxyLuTEMgGdDiMYCPJ_Y63azFHjOv9oH_jPIlN9tcu5_b4x1PpZuBBMyXiEqjjdnmft_RCcrMr?width=1466&amp;amp;height=408&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;I type &lt;/code&gt;只能处理12 bit 立即数&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;LI = LUI + ADDI
+    &lt;ul&gt;
+      &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4muP-145WsnADoJQkCOu408FSE_5yYyr0iryC-6wvNTJ7G3eZ8CthGBhm6IVdGRCuXZZrcKP4mepPgDQnpFnpEzAO8TvrEq6I4toAEjuMv0-tcjy2X7wF_fNKCqq-7togjeBqhZaOn8w6RS8mI_KZqXwKue9dV95mv__AWzFy4vyAt2oSKcT6FttPN-o-gGmhW?width=1770&amp;amp;height=990&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;https://snz04pap002files.storage.live.com/y4mUTd2NJ5QIKRlWd0NtMbOYNirRqFBlLUndMQPTIi9_fqaDFlbgM7WiIeSKITRzqE1ecF22d0wQFSDZxhijaq8nfzNr6MRWbQQ_EVMwXt81b1SpQ_glRN6pfgCAdMo0ZQ9nM9_J5urBw7-dHTI7v-3gGKoj591FHQT_EEVcUBZ8H65UMy9wlxqNs3Et6XY-_En?width=1770&amp;amp;height=1328&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;DEADBEEF&lt;/strong&gt;: 如图所示，出现了问题。当且仅当32bit的后12bit为负数时，进行addi操作会扩展成补码。例如 &lt;code class=&quot;highlighter-rouge&quot;&gt;0xEFF&lt;/code&gt;会扩展成&lt;code class=&quot;highlighter-rouge&quot;&gt;0xFFFFFEFF&lt;/code&gt;。对于前20bit来说， 加上 &lt;code class=&quot;highlighter-rouge&quot;&gt;0xFFFFF000&lt;/code&gt;无疑等于对第12位取反。&lt;/li&gt;
+      &lt;li&gt;解决方法是， 当后三位大于 &lt;code class=&quot;highlighter-rouge&quot;&gt;0x7FF&lt;/code&gt;的时候，对第12位+1， 或者是对&lt;code class=&quot;highlighter-rouge&quot;&gt;x10&lt;/code&gt;+1。 因为第12位是对于16进制的剩余类，在这个剩余类中，&lt;code class=&quot;highlighter-rouge&quot;&gt;0+F=F, F+1=0&lt;/code&gt;, 取反加1为自身。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ref&quot;&gt;REF&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://1drv.ms/b/s!Au3reWMu7K2ChOZfWdNGg9fNARrDAA?e=QDam4p&quot;&gt;Risc-V instructions Set&lt;/a&gt;&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="EDU" /><category term="EDU" /><summary type="html">Intro</summary></entry><entry><title type="html">RISC-V 指令集</title><link href="https://aaaab3n.moe/technology/2021/03/15/risc-v.html" rel="alternate" type="text/html" title="RISC-V 指令集" /><published>2021-03-15T02:02:59+00:00</published><updated>2021-03-15T02:02:59+00:00</updated><id>https://aaaab3n.moe/technology/2021/03/15/risc-v</id><content type="html" xml:base="https://aaaab3n.moe/technology/2021/03/15/risc-v.html">&lt;h2 id=&quot;calculate&quot;&gt;CALCULATE&lt;/h2&gt;
 
 &lt;h3 id=&quot;add&quot;&gt;ADD&lt;/h3&gt;
 
