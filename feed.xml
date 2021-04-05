@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-04T17:46:03+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T06:09:08+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -199,8 +199,12 @@
     &lt;p&gt;Union&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;hold different types in &lt;strong&gt;the same location&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;也就是说会存在&lt;strong&gt;内存复写&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;hold different types in &lt;strong&gt;the same location&lt;/strong&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;也就是说会存在&lt;strong&gt;内存复写&lt;/strong&gt;&lt;/p&gt;
+      &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;size为最大数据结构的大写， 对齐到 4k ， 例如 char 虽然是 1 字节， 但 union 会 size = 4&lt;/p&gt;
       &lt;/li&gt;
@@ -208,24 +212,69 @@
         &lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/&quot;&gt;https://www.geeksforgeeks.org/c-language-2-gq/structure-union-gq/&lt;/a&gt; Q8 is worth doing Q19 helps understanding&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;string.h&amp;gt;
+        &lt;p&gt;```C
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 union a{
     char b[6];
     char c[9];
-} data;
-    
-int main(){
+} data;&lt;/string.h&gt;&lt;/stdio.h&gt;&lt;/p&gt;
+
+        &lt;p&gt;int main(){
     // char d[7];
-    union a A = {&quot;abcdef&quot;};
-    strcpy(A.c, &quot;12345678&quot;);
-    printf(&quot;%s&quot;, A.b);
-}
-    
-output is 12345678
-&lt;/code&gt;&lt;/pre&gt;
+    union a A = {“abcdef”};
+    strcpy(A.c, “12345678”);
+    printf(“%s”, A.b);
+}&lt;/p&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;output is 12345678&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  
+- ```C
+  #include &amp;lt;stdio.h&amp;gt;
+  #include &amp;lt;string.h&amp;gt;
+  typedef union {
+      unsigned long long num;
+      struct {
+          unsigned short a;
+          unsigned short b;
+          unsigned short c;
+          unsigned short d;
+      } data;
+  } Datatype;
+    
+  int main(){
+  Datatype y;
+  y.num= 0xABCDDCBADCABAAAA;
+  printf(&quot;%d\n&quot;, y.data.a);
+  printf(&quot;%d\n&quot;, y.data.b);
+  printf(&quot;%d\n&quot;, y.data.c);
+  printf(&quot;%d\n&quot;, y.data.d);
+  }
+    
+    
+  [Running]  gcc test.c -o test &amp;amp;&amp;amp; test
+  43690
+  56491
+  56506
+  43981
+  [Done] exited with code=0 in 1.206 seconds
+    
+  &amp;gt;&amp;gt;&amp;gt; 0xABCD
+  43981
+  &amp;gt;&amp;gt;&amp;gt; 0xDCBA
+  56506
+  &amp;gt;&amp;gt;&amp;gt; 0xDCAB
+  56491
+  &amp;gt;&amp;gt;&amp;gt; 0xAAAA
+  43690
+  &amp;gt;&amp;gt;&amp;gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;由此可见， 结构体中的类型是自上而下的，而小端序是先下后上的。于是产生了 x 反而对应末尾的2字节。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
