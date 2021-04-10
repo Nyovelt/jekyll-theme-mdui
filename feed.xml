@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-05T14:28:56+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aaaab3n.moe/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aaaab3n.moe/" rel="alternate" type="text/html" /><updated>2021-04-10T08:52:11+00:00</updated><id>https://aaaab3n.moe/feed.xml</id><title type="html">Canarypwn’s Natïve blog</title><subtitle>A life matrix to witness, think and love.</subtitle><author><name>Canarypwn</name></author><entry><title type="html">[Note] CS131 编译原理</title><link href="https://aaaab3n.moe/education/2021/04/09/CS131.html" rel="alternate" type="text/html" title="[Note] CS131 编译原理" /><published>2021-04-09T02:01:59+00:00</published><updated>2021-04-09T02:01:59+00:00</updated><id>https://aaaab3n.moe/education/2021/04/09/CS131</id><content type="html" xml:base="https://aaaab3n.moe/education/2021/04/09/CS131.html">&lt;h2 id=&quot;syntax-句法&quot;&gt;Syntax 句法&lt;/h2&gt;
+
+&lt;h3 id=&quot;ll0&quot;&gt;LL(0)&lt;/h3&gt;
+
+&lt;h4 id=&quot;构造解析表&quot;&gt;构造解析表&lt;/h4&gt;
+
+&lt;h5 id=&quot;step-1-计算-first&quot;&gt;Step 1: 计算 &lt;code class=&quot;highlighter-rouge&quot;&gt;FIRST()&lt;/code&gt;&lt;/h5&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;computeFirst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;err&quot;&gt;对于每个&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;non&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;terminal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;初始化&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FIRST&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;集合为空集&lt;/span&gt;
+	&lt;span class=&quot;err&quot;&gt;对于&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;每一个&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;terminal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;err&quot;&gt;其&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FIRST&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;集合有且仅为自身&lt;/span&gt;
+	&lt;span class=&quot;err&quot;&gt;当对&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;进行更新的时候&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;err&quot;&gt;对于每一个生成规则&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        	&lt;span class=&quot;err&quot;&gt;如果&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;中只有&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epsilon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            	&lt;span class=&quot;err&quot;&gt;其&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FIRST&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;集合包含&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epsilon&lt;/span&gt;
+          &lt;span class=&quot;err&quot;&gt;对于其它每一个&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            	&lt;span class=&quot;n&quot;&gt;FIRST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FIRST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+              &lt;span class=&quot;err&quot;&gt;如果加进来的不是&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epsilon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                	&lt;span class=&quot;err&quot;&gt;停止&lt;/span&gt;
+              
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Canarypwn</name></author><category term="Education" /><category term="Education" /><summary type="html">Syntax 句法</summary></entry><entry><title type="html">CA1-MidTerm 梳理</title><link href="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html" rel="alternate" type="text/html" title="CA1-MidTerm 梳理" /><published>2021-04-01T02:02:59+00:00</published><updated>2021-04-01T02:02:59+00:00</updated><id>https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid</id><content type="html" xml:base="https://aaaab3n.moe/edu/2021/04/01/Computer-Architecture-Mid.html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;h3 id=&quot;ca-六大思想&quot;&gt;CA 六大思想&lt;/h3&gt;
 
@@ -1840,189 +1861,4 @@ In other words, the distribution of $ Z_{n} $ approaches the distribution of a G
 
 &lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
 
-&lt;p&gt;正如现代人面临着从现代到后现代的迷茫一样，面对如此大体量的清朝，当时的统治阶级在进入近代史时必然需要试错，但世界上几乎没有一个国家能像清朝有如此强大的生命力进行如此多次的试错。在清朝一次次的实践中，我们可以总结出历史规律，如同严复的天演论一样，在面对内忧外患的情况下，一个能够进行军事研发动员，拥有强大生产力进行工厂生产，一个行政效率高避免腐败和内耗的体制才能度过筛选，避免灭亡的命运。&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="Education" /><category term="Essay" /><summary type="html">封建帝国末期的救亡图存与封建思潮的覆灭</summary></entry><entry><title type="html">使用 GitHub Actions 与 Cloudflare 重构博客体验</title><link href="https://aaaab3n.moe/technology/2020/11/28/github-and-cloudflare.html" rel="alternate" type="text/html" title="使用 GitHub Actions 与 Cloudflare 重构博客体验" /><published>2020-11-28T02:01:59+00:00</published><updated>2020-11-28T02:01:59+00:00</updated><id>https://aaaab3n.moe/technology/2020/11/28/github-and-cloudflare</id><content type="html" xml:base="https://aaaab3n.moe/technology/2020/11/28/github-and-cloudflare.html">&lt;h2 id=&quot;caution&quot;&gt;Caution&lt;/h2&gt;
-
-&lt;p&gt;Due to rendering problem, some characters can’t be displayed correctly by markdown ( &lt;strong&gt;such as $&lt;/strong&gt; ). Read source code instead.&lt;/p&gt;
-
-&lt;h2 id=&quot;为什么不自己-host-服务&quot;&gt;为什么不自己 Host 服务&lt;/h2&gt;
-
-&lt;p&gt;正如 苏卡卡 在  &lt;a href=&quot;https://blog.skk.moe/post/cloud-and-sla/&quot;&gt; 谈谈云服务和 SLA &lt;/a&gt;  中说的，在线云服务的 SLA 相比自己 Host 一个服务，可用性有很明显的提升。而且 GitHub Pages, GitHub Actions 和 Cloudflare 都是有免费额度的，对于个人用户完全够用。相信很多人之前买了 VPS，之后因为各种原因没有做好备份导致写了很久的博客文章丢失的事情，GitHub 的存储服务也能解决这个问题。&lt;/p&gt;
-
-&lt;h2 id=&quot;为什么不用之前的-netlify&quot;&gt;为什么不用之前的 Netlify&lt;/h2&gt;
-
-&lt;p&gt;之前笔者是使用 Netlify 来构建博客的， Netlify 可以 Hook 住某个 GitHub repo， 在有 commit 的时候自动拉下来。它有一个 ubuntu 的虚拟环境，根据写的指令自动构建完后 Host 网页。 Netlify 还有自带的 CDN 和 DNS解析服务，在刚开始搭建博客的时候， Netlify 用的是 Digital Ocean 的 CDN，它的日本节点对于大陆网络的友好程度是要高于 Cloudflare 的。&lt;/p&gt;
-
-&lt;p&gt;但最近 Netlify 推出了更加严格的限制，限制了网页流量和编译所用的时长。我一个月后去看发现欠费了 7 美元。再加上现在 DO 的 CDN 对大陆的友好程度直线下降， Cloudflare 在声誉和基础设施上的投入上也使我非常青睐。一个大一同学的项目  &lt;a href=&quot;https://github.com/Spedoske/CloudflareScanner&quot;&gt;Spedoske/CloudflareScanner (github.com)&lt;/a&gt; 可以扫描出最快的 Cloudflare 节点，有着很多用途。&lt;/p&gt;
-
-&lt;h2 id=&quot;github-actions&quot;&gt;GitHub Actions&lt;/h2&gt;
-
-&lt;p&gt;简单来说，GitHub Actions 可以提供一台无法直接访问的 Azure ，通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;.github/workflows/*.yml&lt;/code&gt; 执行所写的指令。 Azure 可以提供 Ubuntu 、 Windows 等环境。另一位同学的项目 &lt;a href=&quot;https://github.com/KiruyaMomochi/RediveExtract&quot;&gt;KiruyaMomochi/RediveExtract (github.com)&lt;/a&gt; 就是使用 GitHub Actions 抓取公主链接的新版本然后解包剧情推送到 Telegram Bot 上。甚至有人用 GitHub Actions 来自动构建 OpenWRT （&lt;a href=&quot;https://github.com/Hyy2001X/AutoBuild-Actions&quot;&gt;Hyy2001X/AutoBuild-Actions: 使用 Github Actions 编译 Openwrt&lt;/a&gt;）。本文主要介绍了三种框架的 GitHub Actions 。&lt;/p&gt;
-
-&lt;h3 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h3&gt;
-
-&lt;p&gt;Jekyll 在官方 &lt;a href=&quot;https://jekyllrb.com/docs/continuous-integration/github-actions/&quot;&gt;GitHub Actions &lt;/a&gt; 提供了 GitHub Actions。不过由于我的依赖和官方的 bundler 版本冲突，所以选择自己写。&lt;/p&gt;
-
-&lt;p&gt;该文件见  &lt;a href=&quot;https://github.com/Nyovelt/jekyll-theme-mdui/tree/master/.github/workflows&quot;&gt;jekyll-theme-mdui/.github/workflows at master · Nyovelt/jekyll-theme-mdui&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: Build and deploy Jekyll site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;首先的 name 是整个 GitHub Action 的描述&lt;/li&gt;
-  &lt;li&gt;on 代表何时触发 Action
-    &lt;ul&gt;
-      &lt;li&gt;push 代表当某个分支有提交时触发 push&lt;/li&gt;
-      &lt;li&gt;workflow_dispatch 提供了网页手动触发&lt;/li&gt;
-      &lt;li&gt;此外还有每按一次 star 触发 和 schedule 的按时触发&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
-  github-pages:
-    runs-on: ubuntu-latest
-    steps:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;表示使用 ubuntu-latest 作为构建机的操作系统，用 docker 的同学应该很熟悉&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: $-gems-$
-          restore-keys: |
-            $-gems-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;由于 &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;执行过程时间非常长，所以添加缓存来节省时间和公共资源。该代码块的意思是以每一个 Gemfile.lock 创建一次缓存，这样可以节省安装相应依赖所用的时间&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install gem git -y
-          sudo gem install bundler:1.17.2 jekyll
-
-      - name: Build jekyll
-        run: |
-          cd $
-          bundle install
-          bundle exec jekyll build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;这两个就和正常 ubuntu 的运行命令一样了。 其中 &lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt;是 GitHub Actions 的环境变量，表示了 repo 所在的目录&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      - name: Invoke Deployment
-        with:
-          ACCESS_TOKEN: $
-          BRANCH: gh-pages
-          FOLDER: _site
-        uses: JamesIves/github-pages-deploy-action@3.2.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;这一段代码块是将特定文件夹 &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt;内容推送到 &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;分支。其中 &lt;code class=&quot;highlighter-rouge&quot;&gt;secrets.ACCESS_TOKEN&lt;/code&gt;可以在 上文 Jekyll 的文档中找到描述，是在 secrets 里创建一个键值对，来记录你的 GitHub Token 。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;hugo&quot;&gt;Hugo&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: Build and deploy Hugo site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
-  
-
-jobs:
-  github-pages:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: |
-          cd ~
-          wget https://github.com/gohugoio/hugo/releases/download/v0.78.2/hugo_0.78.2_Linux-64bit.deb
-          sudo dpkg -i hugo*.deb
-          hugo version
-           
-      - name: Build Hugo
-        run: |
-          cd $
-          hugo
-          
-      - name: Invoke Deployment
-        with:
-          ACCESS_TOKEN: $
-          BRANCH: gh-pages
-          FOLDER: public
-        uses: JamesIves/github-pages-deploy-action@3.2.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;默认的 Ubuntu 是 bionic 版本，因此它的软件源不是最新的 （比如 apt 的 Hugo 版本是 0.4 因此不能正常编译）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;node&quot;&gt;Node&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/amphineko/atomicneko/blob/master/.github/workflows/deploy-pages.yml&quot;&gt;atomicneko/deploy-pages.yml at master · amphineko/atomicneko (github.com)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: 
-      - master
-      - deploy-action
-  workflow_dispatch:
-  
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-
-    - name: Invoke Webpack build
-      run: |
-        npm install .
-        npm run build
-
-    - name: Invoke Deployment
-      with:
-        ACCESS_TOKEN: $
-        BRANCH: gh-pages
-        FOLDER: dist
-      uses: JamesIves/github-pages-deploy-action@3.2.1
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;github-pages--cloudflare&quot;&gt;GitHub Pages + Cloudflare&lt;/h2&gt;
-
-&lt;p&gt;这个部分会介绍的简略一些，因为网上同类文档很多，而且操作很简单。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://sn3301files.storage.live.com/y4mW-R9hfnuB-2UE2bDy4bqoWFMDe08UL1prmOjxt4HU23XIsTj6OMY595LcnBBv7UsmPabV16ys7ZaGxIf7Qm8JUb4FKKwnE3Hy_pCkEe9Cdl24YMt28ecm5BOaMT9NpoK4mDBDKEsxljhCa7Z7uJcHUtB9VUkJ3xMzrXPDJrGgFG7GE6vJLdvmcxOZrC-_pG4?width=1024&amp;amp;height=442&amp;amp;cropmode=none&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;总之， Cloudflare 作为 CDN 提供了对网页 （也就是 GitHub Pages）的缓存，同时提供了很多安全选项，比如强制性的 https 和 TLS 。&lt;/p&gt;
-
-&lt;p&gt;在从 Netlify 切换到了这一套新的架构以后，访问体验有了肉眼可见的提升。&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="Technology" /><category term="Cloudflare" /><category term="Blog" /><category term="Website" /><summary type="html">Caution</summary></entry></feed>
+&lt;p&gt;正如现代人面临着从现代到后现代的迷茫一样，面对如此大体量的清朝，当时的统治阶级在进入近代史时必然需要试错，但世界上几乎没有一个国家能像清朝有如此强大的生命力进行如此多次的试错。在清朝一次次的实践中，我们可以总结出历史规律，如同严复的天演论一样，在面对内忧外患的情况下，一个能够进行军事研发动员，拥有强大生产力进行工厂生产，一个行政效率高避免腐败和内耗的体制才能度过筛选，避免灭亡的命运。&lt;/p&gt;</content><author><name>Canarypwn</name></author><category term="Education" /><category term="Essay" /><summary type="html">封建帝国末期的救亡图存与封建思潮的覆灭</summary></entry></feed>
